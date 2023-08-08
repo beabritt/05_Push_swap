@@ -13,7 +13,7 @@
 #include<unistd.h>
 #include<stdio.h>
 #include<stdlib.h>
-#include "libft.h"
+#include "pruebaslib.h"
 
 // Reserves a strings array using malloc, splitting string s in substrings
 //		using c character as an delimiter. Array must end with a NULL.

@@ -18,14 +18,14 @@ int	main (int argc, char *argv[])
 	printf("%s\n", argv[2]);
 	printf("%s\n", argv[3]);
 
-	printf("Después de split:");
+	printf("Después de split:\n");
 
 	i = 1;
 	x = 0;
 	while (i < n)
 	{
 		array = ft_split(argv[i], ' ');
-		prinft("%s\n", array[x]);
+		printf("%s\n", array[x]);
 		i++;
 		x++;
 	}
