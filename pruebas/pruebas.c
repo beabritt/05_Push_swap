@@ -5,8 +5,7 @@
 
 int	main (int argc, char *argv[])
 {
-
-	size_t	n;
+	size_t n;
 	size_t	i;
 	size_t	x;
 	char	**array;
@@ -22,10 +21,11 @@ int	main (int argc, char *argv[])
 
 	i = 1;
 	x = 0;
-	while (i < n)
+	while (i <= n)
 	{
 		array = ft_split(argv[i], ' ');
 		printf("%s\n", array[x]);
+		printf("%s\n", array[x + 1]);
 		i++;
 		x++;
 	}

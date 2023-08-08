@@ -19,4 +19,11 @@
 
 
 
+typedef struct s_node
+{
+    int content;
+    struct s_node   *next;
+}   t_node;
+
+
 #endif
