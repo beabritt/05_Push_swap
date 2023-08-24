@@ -1,43 +1,48 @@
 #include<stdio.h>
 #include "pruebaslib.h"
 
-
-size_t	ft_checkspace(char *s)
+//Check errors. 0 is ok, -1 is error.
+int	ft_checkerror(int argc, char **argv)
 {
-	size_t	x;
+	int	yn;
 
-	if (!s)
-		return(NULL);
-	x = strchr(s, ' ');
-	return (x);
+	yn = ft_checknum(argc, argv);
+		if (yn != 0)
+			return (yn);
+	return (yn);
 }
+
 
 int	main (int argc, char *argv[])
 {
-	size_t n;
-	size_t	i;
-	size_t	x;
-	size_t	s;
-	int		content;
-	char	**array;
-	t_list	*stack_a;
+	int n;
+	//size_t	i;
+	//size_t	x;
+	//size_t	s;
+	//int		content;
+	//char	**array;
+	//t_list	*stack_a;
 
-	n = (size_t)argc - 1;
+	//n = (size_t)argc - 1;
 	printf("Nombre del programa: %s\n", argv[0]);
-	printf("El nº de argumentos es: %zu\n", n);
+	printf("El nº de argumentos es: %d\n", argc);
 	printf("%s\n", argv[1]);
 	printf("%s\n", argv[2]);
 	//printf("%s\n", argv[3]);
 
-	/*x = 0;
-	while (x == 0)
-	{
-		x = ft_errors(argv);
-	}
-	if (x == 1)
-	*/
 
-	i = 1;
+	n = ft_checkerror(argc, argv);
+	printf("%d\n", n);
+	if (n != 0)
+		write(1,"Error\n",6);
+
+
+	
+
+	//i es el n de args menos el nombre del prg.
+
+
+	/*i = 1;
 	while (i < argc)
 	{
 		x = ft_checkspace(argv[i]);
@@ -57,7 +62,7 @@ int	main (int argc, char *argv[])
 			ft_lstnew(content);
 		}
 
-	}
+	}*/
 
 
 	printf("Después de split:\n");
@@ -74,6 +79,6 @@ int	main (int argc, char *argv[])
 		x++;
 	}
 	*/
-	free(array);
+	//free(array);
 	return (0);
 }

@@ -83,19 +83,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (arr);
 }
-
-/*int	main(void)
-{
-	//char	s[14] = "Que puto frio";
-	char	c;
-	char	**array;
-
-	c ='z';
-	array = ft_split("", c);
-	printf("%s \n", array[0]);
-	printf("%s \n", array[1]);
-	printf("%s \n", array[2]);
-	free (array);
-	return (0);
-}
-*/

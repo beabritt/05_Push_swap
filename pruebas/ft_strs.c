@@ -12,7 +12,60 @@
 
 #include "pruebaslib.h"
 
-size_t	*ft_strchr(const char *s, int c)
+int	ft_atoi(const char *str)
+{
+	int	x;
+	int	num;
+	int	sign;
+
+	num = 0;
+	sign = 1;
+	x = 0;
+
+	while ((str[x] == 32 || (str[x] >= 9 && str[x] <= 13)))
+	{
+		x++;
+	}	
+	if (str[x] == '-')
+		sign *= -1;
+	if (str[x] == '-' || str[x] == '+')
+		x++;
+	while (str[x] >= '0' && str[x] <= '9')
+	{
+		num = num * 10 + (str[x] - '0');
+		x++;
+	}
+	return (num * sign);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char		*subs;
+	size_t		slen;
+
+	if (!s)
+		return (0);
+	slen = ft_strlen(s);
+	if (len > slen)
+		len = slen;
+	if (start + len > slen)
+		len = slen - start;
+	if (start >= slen)
+	{
+		subs = (char *)malloc(1);
+		if (!subs)
+			return (0);
+		*subs = 0;
+		return (subs);
+	}
+	subs = (char *)malloc(len + 1);
+	if (!subs)
+		return (0);
+	ft_strlcpy(subs, &s[start], len + 1);
+	return (subs);
+}
+
+int	*ft_strchr(const char *s, int c)
 {
 	const int	slen = ft_strlen(s);
 	int			x;
@@ -21,7 +74,7 @@ size_t	*ft_strchr(const char *s, int c)
 	while (x <= slen)
 	{
 		if (s[x] == (char)c)
-			return ((size_t *)1);
+			return (-1);
 		else
 			x++;
 	}
