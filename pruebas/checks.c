@@ -6,12 +6,17 @@ int	ft_checknum(int argc, char **argv)
 	int	j;
 
 	i = 1;
-
 	while(i < argc)
 	{
 		j = 0;
 		while (argv[i][j] != '\0')
 		{	
+			while (argv[i][j] == '-')
+			{
+				j++;
+				if (argv[i][j] == '-' || argv[i][j] == ' ')
+					return (-1);
+			}
 			if (argv[i][j] == ' ' || argv[i][j] == '-' 
 				|| (argv[i][j] >= '0' && argv[i][j] <= '9'))
 				j++;
@@ -19,35 +24,36 @@ int	ft_checknum(int argc, char **argv)
 				return (-1);
 		}
 		i++;
-		
 	}
-	if (i == argc)
-		return (0);
-	else
-		return (-1);
+	return (0);
 }
-int	checkmaxmin(int argc, char **argv)
+int	ft_checkmaxmin(int argc, char **argv)
 {
 	int	i;
 	int	minus;
-	int	yn;
 
 	i = 1;
 	while (i < argc)
 	{
-		minus = ft_strchr('-', argv[i]);
+		minus = ft_strchr(argv[i], '-');
 		if (minus == 0)
-			{
-				minus = ft_atoi(argv[i]);
-				if (minus < 0)
-					return (-1);
-			}
+		{
+			minus = ft_atoi(argv[i]);
+			if (minus < 0)
+				return (-1);
+		}
 		else
+		{
 			minus = ft_atoi(argv[i]);
 			if (minus > 0)
 				return (-1);
+		}
 		i++;
 	}
+	return (0);
+}
+int	ft_checkdupe(int argc, char **argv)
+{
 
 }
 

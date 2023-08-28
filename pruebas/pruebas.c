@@ -9,6 +9,9 @@ int	ft_checkerror(int argc, char **argv)
 	yn = ft_checknum(argc, argv);
 		if (yn != 0)
 			return (yn);
+	yn = ft_checkmaxmin(argc, argv);
+		if (yn != 0)
+			return(yn);
 	return (yn);
 }
 
@@ -64,8 +67,6 @@ int	main (int argc, char *argv[])
 
 	}*/
 
-
-	printf("Después de split:\n");
 
 /*
 	i = 1;

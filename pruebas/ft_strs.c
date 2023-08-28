@@ -65,7 +65,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (subs);
 }
 
-int	*ft_strchr(const char *s, int c)
+int	ft_strchr(const char *s, int c)
 {
 	const int	slen = ft_strlen(s);
 	int			x;
