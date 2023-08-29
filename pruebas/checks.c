@@ -52,8 +52,8 @@ int	ft_checkmaxmin(int argc, char **argv)
 	}
 	return (0);
 }
-int	ft_checkdupe(int argc, char **argv)
+/*int	ft_checkdupe(int argc, char **argv)
 {
 
-}
+}*/
 

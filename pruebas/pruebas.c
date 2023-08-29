@@ -1,6 +1,20 @@
 #include<stdio.h>
 #include "pruebaslib.h"
 
+char	ft_toarray(int argc, char **argv)
+{
+	
+}
+void	ft_free(char **arr, size_t x)
+{
+
+	while (arr[x] != '\0')
+	{
+		free(arr[x]);
+		x--;
+	}
+	free(arr);
+}
 //Check errors. 0 is ok, -1 is error.
 int	ft_checkerror(int argc, char **argv)
 {
@@ -23,7 +37,7 @@ int	main (int argc, char *argv[])
 	//size_t	x;
 	//size_t	s;
 	//int		content;
-	//char	**array;
+	char	**array;
 	//t_list	*stack_a;
 
 	//n = (size_t)argc - 1;
@@ -34,6 +48,7 @@ int	main (int argc, char *argv[])
 	//printf("%s\n", argv[3]);
 
 
+	
 	n = ft_checkerror(argc, argv);
 	printf("%d\n", n);
 	if (n != 0)

@@ -24,7 +24,7 @@ static int	ft_search(const char *s, char c, int x)
 	return (x);
 }
 
-static size_t	ft_wcounter(char const *s, char c)
+size_t	ft_wcounter(char const *s, char c)
 {
 	size_t	x;
 	size_t	cont;
@@ -45,7 +45,7 @@ static size_t	ft_wcounter(char const *s, char c)
 	return (cont);
 }
 
-static void	*ft_free(char **arr, size_t a)
+void	*ft_free(char **arr, size_t a)
 {
 	while (!arr[a])
 	{
