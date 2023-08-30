@@ -90,12 +90,14 @@ char	**ft_split(char const *s, char c)
 	char	c;
 	char	**array;
 
-	c ='z';
-	array = ft_split("", c);
+	c =' ';
+	array = ft_split("25 56 23  45 -87  92", c);
 	printf("%s \n", array[0]);
 	printf("%s \n", array[1]);
 	printf("%s \n", array[2]);
+	printf("%s \n", array[3]);
+	printf("%s \n", array[4]);
+	printf("%s \n", array[5]);
 	free (array);
 	return (0);
-}
-*/
+}*/

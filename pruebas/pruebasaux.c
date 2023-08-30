@@ -9,35 +9,48 @@ void	ft_free(char **arr, size_t x)
 	}
 	free(arr);
 }
+int	ft_slen(int argc, char **argv)
+{
+	int x;
+	int	len;
+
+	x = 1;
+	len = 0;
+	while (x < argc)
+	{
+		len += ft_strlen(argv[x]);
+		x++;
+	}
+	return (len);
+}
+
+char	**ft_toarray2(int argc, char **argv, char **arr)
+{
+	int		x;
+	int		y;
+	int		len;
+	char	*s;
+
+	x = 0;
+	y = 1;
+	len = ft_slen(argc, argv);
+	while (y < argc)
+	{
+
+	}
+}
 
 char	**ft_toarray(int argc, char **argv)
 {
 	char	**arr;
-	int		x;
-	int		y;
-	
-	x = 0;
-	y = 1;
-	printf("llega");
+
 	if (!argv)
 		return (NULL);
 	arr = malloc(argc * sizeof(char *));
 	if (!arr)
 		return (NULL);
-	printf("llega2");
-	while (y < argc)
-	{
-		//if (ft_strchr(argv[y], ' '))
-		arr[x] = malloc(ft_strlen(argv[y]) + 1);
-		if (!arr[x])
-		{
-			ft_free(arr, x);
-			return (NULL);
-		}
-		ft_strlcpy(arr[x],argv[y], sizeof(arr[x]));
-		x++;
-		y++;
-	}
+	arr = ft_toarray2(argc, argv, arr);
+
 	return (arr);
 }
 
@@ -81,3 +94,22 @@ int	main(int argc, char *argv[])
 	printf("\n%i", resultado);
 	return (0);
 }*/
+
+/*
+		if(ft_strchr(argv[y], ' ' == 0))
+		{
+			arr[x] = malloc(ft_strlen(argv[y]) + 1);
+			if (!arr[x])
+			{
+				ft_free(arr, x);
+				return (NULL);
+			}
+			ft_strlcpy(arr[x],argv[y], sizeof(arr[x]));
+		}
+		else
+		{
+
+		}
+		x++;
+		y++;
+		*/

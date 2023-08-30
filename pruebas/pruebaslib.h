@@ -25,7 +25,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 int	    ft_checkerror(int argc, char **argv);
 int	    ft_checknum(int argc, char **argv);
 int	    ft_checkmaxmin(int argc, char **argv);
-int	ft_checkdupe(int argc, char **argv);
+int     ft_checkdupe(int argc, char **argv);
+char	**ft_toarray(int argc, char **argv);
+char	**ft_toarray2(int argc, char **argv, char **arr);
+int	    ft_slen(int argc, char **argv);
+
 
 
 

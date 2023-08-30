@@ -16,7 +16,7 @@
 
 /*size_t	ft_strlen(const char *s);
 void	*ft_memcpy(void *dst, const void *src, size_t n);*/
-/*Reserves enough memory fot s1 and copies it in s2*/
+/*Reserves enough memory for s1 and copies it in s2*/
 
 char	*ft_strdup(const char *s1)
 {
