@@ -27,8 +27,9 @@ int	    ft_checknum(int argc, char **argv);
 int	    ft_checkmaxmin(int argc, char **argv);
 int     ft_checkdupe(int argc, char **argv);
 char	**ft_toarray(int argc, char **argv);
-char	**ft_toarray2(int argc, char **argv, char **arr);
+char	*ft_toarray2(int argc, char **argv);
 int	    ft_slen(int argc, char **argv);
+char	*ft_strjoin_ps(char const *s1, char const *s2);
 
 
 

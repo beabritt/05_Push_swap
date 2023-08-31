@@ -49,3 +49,21 @@ void	*ft_calloc(size_t n, size_t size)
 	ft_bzero(p, x);
 	return (p);
 }
+char	*ft_strjoin_ps(char const *s1, char const *s2)
+{
+	size_t	x;
+	size_t	slen2;
+	size_t	slen1;
+	void	*s3;
+
+	slen1 = ft_strlen(s1);
+	slen2 = ft_strlen(s2);
+	x = slen1 + slen2 + 2;
+	s3 = malloc(x);
+	if (!s3)
+		return (0);
+	ft_strlcpy (s3, s1, slen1 + 1);
+	ft_strlcpy (&s3[slen1], s2, slen2 + 1);
+	ft_strlcpy (&s3[x - 2], " ", 2);
+	return (s3);
+}

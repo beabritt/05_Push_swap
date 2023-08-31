@@ -1,6 +1,6 @@
 #include "pruebaslib.h"
 
-void	ft_free(char **arr, size_t x)
+/*void	ft_free(char **arr, size_t x)
 {
 	while (x > 0)
 	{
@@ -8,7 +8,7 @@ void	ft_free(char **arr, size_t x)
 		x--;
 	}
 	free(arr);
-}
+}*/
 int	ft_slen(int argc, char **argv)
 {
 	int x;
@@ -18,57 +18,68 @@ int	ft_slen(int argc, char **argv)
 	len = 0;
 	while (x < argc)
 	{
-		len += ft_strlen(argv[x]);
+		len += ft_strlen(argv[x]) + 1;
 		x++;
 	}
+	printf("%d\n", len);
 	return (len);
 }
 
-char	**ft_toarray2(int argc, char **argv, char **arr)
+char	*ft_toarray2(int argc, char **argv) //char **arr)
 {
-	int		x;
+	//int		x;
 	int		y;
 	int		len;
 	char	*s;
 
-	x = 0;
+	//x = 0;
 	y = 1;
 	len = ft_slen(argc, argv);
+	s = (char *)ft_calloc(len, sizeof(char *));
+	if (!s)
+		return (0);
 	while (y < argc)
 	{
-
+		s = ft_strjoin_ps(s, argv[y]);
+		y++;
 	}
+	printf("%zu\n", ft_strlen(s));
+	printf("%s", s);
+	printf("%s", "a");
+
+	return (s);
 }
 
-char	**ft_toarray(int argc, char **argv)
+/*char	**ft_toarray(int argc, char **argv)
 {
 	char	**arr;
 
 	if (!argv)
 		return (NULL);
-	arr = malloc(argc * sizeof(char *));
+	arr = (char *)malloc(argc * sizeof(char *));
 	if (!arr)
 		return (NULL);
 	arr = ft_toarray2(argc, argv, arr);
 
 	return (arr);
-}
+}*/
 
 int	main(int argc, char *argv[])
 {
-	char	**array;	
-	size_t	x;
+	//char	**array;
+	char	*s;
+	//size_t	x;
 
 	printf("%i\n", argc);
-	array = ft_toarray(argc, argv);
-	printf("llega");
-	x = 0;
+	s = ft_toarray2(argc, argv);
+	/*x = 0;
 	while (array[x])
 	{
 		printf("%s\n", array[x]);
 		x++;
 	}
-	ft_free(array, argc);
+	ft_free(array, argc);*/
+	free(s);
 	return(0);
 }
 
