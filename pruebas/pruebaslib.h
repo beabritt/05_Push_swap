@@ -13,6 +13,7 @@ typedef struct s_list
 
 
 char	**ft_split(char const *s, char c);
+void	*ft_free(char **arr, size_t a);
 size_t	ft_wcounter(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *s);
@@ -26,10 +27,12 @@ int	    ft_checkerror(int argc, char **argv);
 int	    ft_checknum(int argc, char **argv);
 int	    ft_checkmaxmin(int argc, char **argv);
 int     ft_checkdupe(int argc, char **argv);
+int	    ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	**ft_toarray(int argc, char **argv);
 char	*ft_toarray2(int argc, char **argv);
 int	    ft_slen(int argc, char **argv);
 char	*ft_strjoin_ps(char const *s1, char const *s2);
+
 
 
 

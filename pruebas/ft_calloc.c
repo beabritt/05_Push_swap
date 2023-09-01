@@ -67,3 +67,29 @@ char	*ft_strjoin_ps(char const *s1, char const *s2)
 	ft_strlcpy (&s3[x - 2], " ", 2);
 	return (s3);
 }
+int	ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t	x;
+	size_t	y;
+
+	x = 0;
+	y = 0;
+	if (needle[0] == '\0')
+		return (0);
+	while (x < len && haystack[x] != '\0' && needle[y] != '\0')
+	{
+		while (x < len && haystack[x] != needle[y]
+			&& haystack[x] != '\0')
+			x++;
+		while (x < len && haystack[x] == needle[y]
+			&& needle[y] != '\0')
+		{	
+			x++;
+			y++;
+		}
+	}
+	if (haystack[x - y] == needle[0] && needle[y] == '\0')
+		return (-1);
+	else
+		return (0);
+}

@@ -1,11 +1,7 @@
 #include<stdio.h>
 #include "pruebaslib.h"
 
-char	ft_toarray(int argc, char **argv)
-{
-	
-}
-void	ft_free(char **arr, size_t x)
+/*void	ft_free(char **arr, size_t x)
 {
 
 	while (arr[x] != '\0')
@@ -14,7 +10,7 @@ void	ft_free(char **arr, size_t x)
 		x--;
 	}
 	free(arr);
-}
+}*/
 //Check errors. 0 is ok, -1 is error.
 int	ft_checkerror(int argc, char **argv)
 {
@@ -26,6 +22,9 @@ int	ft_checkerror(int argc, char **argv)
 	yn = ft_checkmaxmin(argc, argv);
 		if (yn != 0)
 			return(yn);
+	yn = ft_checkdupe(argc, argv);
+		if (yn != 0)
+			return (yn);
 	return (yn);
 }
 
@@ -37,7 +36,7 @@ int	main (int argc, char *argv[])
 	//size_t	x;
 	//size_t	s;
 	//int		content;
-	char	**array;
+	//char	**array;
 	//t_list	*stack_a;
 
 	//n = (size_t)argc - 1;
@@ -45,16 +44,14 @@ int	main (int argc, char *argv[])
 	printf("El nº de argumentos es: %d\n", argc);
 	printf("%s\n", argv[1]);
 	printf("%s\n", argv[2]);
-	//printf("%s\n", argv[3]);
+	printf("%s\n", argv[3]);
 
-
-	
 	n = ft_checkerror(argc, argv);
 	printf("%d\n", n);
 	if (n != 0)
 		write(1,"Error\n",6);
 
-
+}
 	
 
 	//i es el n de args menos el nombre del prg.
@@ -94,7 +91,7 @@ int	main (int argc, char *argv[])
 		i++;
 		x++;
 	}
-	*/
+	
 	//free(array);
 	return (0);
-}
+}*/

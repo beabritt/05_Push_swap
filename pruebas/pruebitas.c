@@ -15,7 +15,7 @@ int	ft_slen(int argc, char **argv)
 	return (len);
 }
 
-int main (int argc, char **argv)
+/*int main (int argc, char **argv)
 {
     int len;
 
@@ -23,4 +23,4 @@ int main (int argc, char **argv)
     len = ft_slen(argc, argv);
     printf("%d\n", len);
     return (0);
-}
+}*/
