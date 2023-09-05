@@ -1,44 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.c                                          :+:      :+:    :+:   */
+/*   ft_werrors.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 12:54:38 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/05 13:03:02 by becamino         ###   ########.fr       */
+/*   Created: 2023/09/05 12:57:37 by becamino          #+#    #+#             */
+/*   Updated: 2023/09/05 13:01:27 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_werror(char  **array)
 {
-	t_list	*aux;
+	int	x;
 
-	if (!lst || !new)
-		return ;
-	else if (!*lst)
-		*lst = new;
-	else
-	{	
-		aux = *lst;
-		while (aux->next != NULL)
-		{
-			aux = aux->next;
-		}
-		aux->next = new;
-	}
+	x = 0;
+	write(1, "Error\n", 6);
+	free(array);	
 }
-
-t_list	*ft_lstnew(int content)
+void    ft_free_end(char **array)
 {
-	t_list	*new;
+    int x;
 
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+    x = 0;
+    x = ft_arrlen(array);
+	ft_free(array, x);
 }

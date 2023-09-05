@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checks.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
+/*   Updated: 2023/09/05 13:03:25 by becamino         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pruebaslib.h"
+
 //Checks if every arg is clear of the rest of chars. 
 int	ft_checknum(int argc, char **argv)
 {
@@ -77,3 +90,19 @@ int	ft_checkdupe(int argc, char **argv)
 	return (0);
 }
 
+//Check errors. 0 is ok, -1 is error.
+int	ft_checkerror(int argc, char **argv)
+{
+	int	yn;
+
+	yn = ft_checknum(argc, argv);
+		if (yn != 0)
+			return (yn);
+	yn = ft_checkmaxmin(argc, argv);
+		if (yn != 0)
+			return(yn);
+	yn = ft_checkdupe(argc, argv);
+		if (yn != 0)
+			return (yn);
+	return (yn);
+}

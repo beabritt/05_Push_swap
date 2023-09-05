@@ -46,9 +46,6 @@ char	**ft_toarray(int argc, char **argv)
 
 	if (!argv)
 		return (NULL);
-	/*arr = (char *)ft_calloc(argc, sizeof(char *));
-	if (!arr)
-		return (NULL);*/
 	s = ft_toarray2(argc, argv);
 	arr = ft_split(s, ' ');
 	free(s);

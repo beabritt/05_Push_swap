@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.c                                          :+:      :+:    :+:   */
+/*   ft_xlen.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 12:54:38 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/05 13:03:02 by becamino         ###   ########.fr       */
+/*   Created: 2023/09/05 12:52:07 by becamino          #+#    #+#             */
+/*   Updated: 2023/09/05 12:52:46 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pruebaslib.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_slen(int argc, char **argv)
 {
-	t_list	*aux;
+	int x;
+	int	len;
 
-	if (!lst || !new)
-		return ;
-	else if (!*lst)
-		*lst = new;
-	else
-	{	
-		aux = *lst;
-		while (aux->next != NULL)
-		{
-			aux = aux->next;
-		}
-		aux->next = new;
+	x = 1;
+	len = 0;
+	while (x < argc)
+	{
+		len += ft_strlen(argv[x]) + 1;
+		x++;
 	}
+	return (len);
 }
 
-t_list	*ft_lstnew(int content)
+int	ft_arrlen(char **array)
 {
-	t_list	*new;
+	int	x;
 
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	x = 0;
+	while(array[x] != '\0')
+	{
+		x++;
+	}
+	return (x);
 }

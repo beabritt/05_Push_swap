@@ -3,16 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 16:07:03 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/27 16:07:05 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:03:39 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
-#include<stdlib.h>
 #include "pruebaslib.h"
 
 // Reserves a strings array using malloc, splitting string s in substrings
