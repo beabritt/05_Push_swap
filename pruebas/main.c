@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:23 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/05 13:07:09 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:10:33 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main (int argc, char *argv[])
 	//size_t	s;
 	//int		content;
 	char		**array;
-	//t_list	*stack_a;
+	t_list		*stack_a;
 
 	//n = (size_t)argc - 1;
 	printf("Nombre del programa: %s\n", argv[0]);
