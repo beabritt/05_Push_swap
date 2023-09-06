@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:38 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/06 12:59:55 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/06 16:29:39 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ t_list	*ft_lstnew(int content)
 {
 	t_list	*new;
 
-	new = (int *)malloc(sizeof(t_list));
+	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
 	new->content = content;

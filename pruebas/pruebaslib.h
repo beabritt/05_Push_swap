@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/06 12:54:40 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/06 17:18:58 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	    ft_strchr(const char *s, int c);
 int	    ft_atoi(const char *str);
 t_list	*ft_lstnew(int content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-t_list	*ft_lstlast(t_list *lst);
+int	    ft_lstsize(t_list *lst);
 void	ft_lstclear(t_list **lst);
 void	ft_lstdelone(t_list *lst);
 int	    ft_checkerror(int argc, char **argv);
@@ -51,7 +51,7 @@ char	*ft_strjoin_ps(char const *s1, char const *s2);
 int	    ft_arrlen(char **array);
 void	ft_werror(char  **array);
 void    ft_free_end(char **array);
-t_list	*ft_tolist(t_list *start, char **array);
+t_list	*ft_tolist(t_list *stack_a, char **array);
 
 
 

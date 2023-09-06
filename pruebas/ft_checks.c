@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/06 12:28:00 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/06 15:58:35 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int	ft_checkmaxmin(int argc, char **argv)
 	printf("2 = 0\n");
 	return (0);
 }
+
 int	ft_checkdupe(int argc, char **argv)
 {
 	int	i;
