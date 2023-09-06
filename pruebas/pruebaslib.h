@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/05 15:29:39 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/06 12:54:40 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 typedef struct s_list
 {
-    int content;
+    int             content;
+    int             order;
     struct s_list   *next;
 }   t_list;
 
@@ -36,6 +37,8 @@ int	    ft_atoi(const char *str);
 t_list	*ft_lstnew(int content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
+void	ft_lstclear(t_list **lst);
+void	ft_lstdelone(t_list *lst);
 int	    ft_checkerror(int argc, char **argv);
 int	    ft_checknum(int argc, char **argv);
 int	    ft_checkmaxmin(int argc, char **argv);

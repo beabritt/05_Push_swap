@@ -6,10 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:52:07 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/05 12:52:46 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/06 12:26:34 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "pruebaslib.h"
 
 int	ft_slen(int argc, char **argv)
 {

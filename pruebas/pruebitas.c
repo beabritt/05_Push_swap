@@ -1,5 +1,29 @@
 #include "pruebaslib.h"
 
+void	ft_lstdelone(t_list *lst)
+{
+	if (!lst)
+		return ;
+	lst->content = '\0';
+	free(lst);
+}
+
+void	ft_lstclear(t_list **lst)
+{
+	t_list	*aux;
+
+	if (!*lst)
+		return ;
+	aux = *lst;
+	while (aux != NULL)
+	{
+		aux = aux->next;
+		ft_lstdelone(*lst);
+		*lst = aux;
+	}
+	*lst = NULL;
+}
+
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*last;
@@ -41,30 +65,11 @@ t_list	*ft_lstnew(int content)
 	if (!new)
 		return (NULL);
 	new->content = content;
+	new->order = 1;
 	new->next = NULL;
 	return (new);
 }
 
-t_list	*ft_tolist(t_list *start, char **array)
-{
-	size_t	i;
-	size_t	x;
-	int		n;
-	t_list	*node;
-	
-	i = 0;
-	n = 0;
-	x = ft_arrlen(array);
-	while (i < x)
-	{
-		n = ft_atoi(array[i]);
-		node = ft_lstnew(n);
-		start = ft_lstlast(&start);
-		ft_lstadd_back(&start, node);
-		i++;
-	}
-	return (start);
-}
 
 /*int main (int argc, char **argv)
 {
@@ -92,7 +97,9 @@ int	main (void)
 	int		x;
 
 	x = 5;
-	a = lstnew(x);
-	printf("%d\n", *(int *)a->content);
+	a = ft_lstnew(x);
+	printf("%d\n", a->content);
+	printf("%d\n", a->order);
+	ft_lstclear(&a);
 	return (0); 
 }

@@ -6,11 +6,33 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:23 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/05 13:10:33 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/06 12:35:06 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
+
+/*t_list	*ft_tolist(t_list *start, char **array)
+{
+	size_t	i;
+	size_t	x;
+	int		n;
+	t_list	*node;
+	
+	i = 0;
+	n = 0;
+	x = ft_arrlen(array);
+	printf("%zu\n", x);
+	while (i < x)
+	{
+		n = ft_atoi(array[i]);
+		node = ft_lstnew(n);
+		start = ft_lstlast(&start);
+		ft_lstadd_back(&start, node);
+		i++;
+	}
+	return (start);
+}*/
 
 char	*ft_toarray2(int argc, char **argv)
 {
@@ -50,11 +72,11 @@ int	main (int argc, char *argv[])
 {
 	int 		n;
 	//size_t	i;
-	int			x;
+	//int			x;
 	//size_t	s;
 	//int		content;
 	char		**array;
-	t_list		*stack_a;
+	//t_list		*stack_a;
 
 	//n = (size_t)argc - 1;
 	printf("Nombre del programa: %s\n", argv[0]);
@@ -74,7 +96,7 @@ int	main (int argc, char *argv[])
 	printf("%s\n", array[0]);
 	printf("%s\n", array[1]);
 	printf("%s\n", array[2]);
-	
+
 	
 	ft_free_end(array);
 	return (0);
