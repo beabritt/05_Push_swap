@@ -32,7 +32,7 @@ int	ft_arrlen(char **array)
 	int	x;
 
 	x = 0;
-	while(array[x] != '\0')
+	while(array[x] != NULL)
 	{
 		x++;
 	}

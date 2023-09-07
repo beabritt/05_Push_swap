@@ -14,9 +14,6 @@
 
 void	ft_werror(char  **array)
 {
-	int	x;
-
-	x = 0;
 	write(1, "Error\n", 6);
 	free(array);	
 }

@@ -52,6 +52,7 @@ int	    ft_arrlen(char **array);
 void	ft_werror(char  **array);
 void    ft_free_end(char **array);
 t_list	*ft_tolist(t_list *stack_a, char **array);
+t_list	*ft_createnode(t_list *stack_a, char *array);
 
 
 

@@ -18,6 +18,7 @@ void	ft_lstdelone(t_list *lst)
 		return ;
 	lst->content = '\0';
 	free(lst);
+	lst = NULL;
 }
 
 void	ft_lstclear(t_list **lst)

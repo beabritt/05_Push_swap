@@ -12,26 +12,31 @@
 
 #include "pruebaslib.h"
 
+t_list	*ft_createnode(t_list *stack_a, char *array)
+{
+		t_list	*node;
+		int		n;
+
+		printf("%s\n", array);
+		n = 0;
+		n = ft_atoi(array);
+		printf("%d\n", n);
+		node = ft_lstnew(n);
+		ft_lstadd_back(&stack_a, node);
+		return(stack_a);
+}
+
 t_list	*ft_tolist(t_list *stack_a, char **array)
 {
 	size_t	i;
 	size_t	x;
-	int		n;
-	t_list	*node;
 	
 	i = 0;
-	n = 0;
 	x = ft_arrlen(array);
 	printf("%zu\n", x);
 	while (i < x)
 	{
-		n = ft_atoi(array[i]);
-		printf("%d\n", n);
-		node = ft_lstnew(n);
-		n = ft_lstsize(node);
-		if (n == 1)
-			stack_a = node;
-		ft_lstadd_back(&stack_a, node);
+		stack_a = ft_createnode(stack_a, array[i]);
 		i++;
 	}
 	return (stack_a);
