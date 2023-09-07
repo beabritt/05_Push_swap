@@ -19,7 +19,7 @@
 
 typedef struct s_list
 {
-    int             content;
+    int             n;
     int             order;
     struct s_list   *next;
 }   t_list;
@@ -35,7 +35,7 @@ void	*ft_calloc(size_t n, size_t size);
 int	    ft_strchr(const char *s, int c);
 int	    ft_atoi(const char *str);
 t_list	*ft_lstnew(int content);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **stack_a, t_list *node);
 int	    ft_lstsize(t_list *lst);
 void	ft_lstclear(t_list **lst);
 void	ft_lstdelone(t_list *lst);
@@ -51,8 +51,8 @@ char	*ft_strjoin_ps(char const *s1, char const *s2);
 int	    ft_arrlen(char **array);
 void	ft_werror(char  **array);
 void    ft_free_end(char **array);
-t_list	*ft_tolist(t_list *stack_a, char **array);
-t_list	*ft_createnode(t_list *stack_a, char *array);
+void    ft_tolist(t_list **stack_a, char **array);
+void    ft_createnode(t_list **stack_a, int n);
 
 
 

@@ -12,34 +12,57 @@
 
 #include "pruebaslib.h"
 
-t_list	*ft_createnode(t_list *stack_a, char *array)
+void	ft_createnode(t_list **stack_a, int n)
 {
 		t_list	*node;
-		int		n;
-
-		printf("%s\n", array);
-		n = 0;
-		n = ft_atoi(array);
-		printf("%d\n", n);
+		t_list	*aux;
+		t_list	*prueba;
+	
 		node = ft_lstnew(n);
-		ft_lstadd_back(&stack_a, node);
-		return(stack_a);
+		ft_lstadd_back(stack_a, node);
+		printf("%d\n", node->n);
+		printf("%d\n", node->order);
+		aux = *stack_a;
+		while(aux->next != NULL)
+		{
+			if(aux->n < node->n)
+				node->order++;
+			if(aux->n > node->n)
+				aux->order++;
+			aux = aux->next;
+		}
+		prueba = *stack_a;
+		printf("%d\n", prueba->n);
+		printf("%d\n", prueba->order);
+		printf("sale\n");
 }
 
-t_list	*ft_tolist(t_list *stack_a, char **array)
+void	ft_tolist(t_list **stack_a, char **array)
 {
 	size_t	i;
 	size_t	x;
-	
+	int		n;
+	t_list	*prueba;
+
 	i = 0;
+	n = 0;
 	x = ft_arrlen(array);
 	printf("%zu\n", x);
 	while (i < x)
 	{
-		stack_a = ft_createnode(stack_a, array[i]);
+		n = ft_atoi(array[i]);
+		ft_createnode(stack_a, n);
 		i++;
 	}
-	return (stack_a);
+	prueba = *stack_a;
+	printf("%d\n", prueba->n);
+	printf("%d\n", prueba->order);
+	prueba = prueba->next;
+	printf("%d\n", prueba->n);
+	printf("%d\n", prueba->order);
+	prueba = prueba->next;
+	printf("%d\n", prueba->n);
+	printf("%d\n", prueba->order);
 }
 
 char	*ft_toarray2(int argc, char **argv)
@@ -106,10 +129,9 @@ int	main (int argc, char *argv[])
 	printf("%s\n", array[1]);
 	printf("%s\n", array[2]);
 	
-	stack_a = ft_tolist(stack_a, array);
-	printf("%d\n", stack_a->content);
-	printf("%d\n", stack_a->order);
-	
+	ft_tolist(&stack_a, array);
+	// printf("%d\n", stack_a->n);
+	// printf("%d\n", stack_a->order);
 	ft_free_end(array);
 	ft_lstclear(&stack_a);
 	return (0);

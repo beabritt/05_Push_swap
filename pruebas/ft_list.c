@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *lst)
 {
 	if (!lst)
 		return ;
-	lst->content = '\0';
+	lst->n = '\0';
 	free(lst);
 	lst = NULL;
 }
@@ -51,22 +51,20 @@ t_list	*ft_lstlast(t_list *lst)
 	return (last);
 }
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **stack_a, t_list *node)
 {
 	t_list	*aux;
 
-	if (!lst || !new)
-		return ;
-	else if (!*lst)
-		*lst = new;
+	if (!*stack_a)
+		*stack_a = node;
 	else
 	{	
-		aux = *lst;
+		aux = *stack_a;
 		while (aux->next != NULL)
 		{
 			aux = aux->next;
 		}
-		aux->next = new;
+		aux->next = node;
 	}
 }
 
@@ -77,9 +75,11 @@ t_list	*ft_lstnew(int content)
 	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
-	new->content = content;
+	new->n = content;
 	new->order = 1;
 	new->next = NULL;
+
+
 	return (new);
 }
 
