@@ -6,36 +6,12 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:23 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/06 17:18:05 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/08 13:46:35 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
 
-void	ft_createnode(t_list **stack_a, int n)
-{
-		t_list	*node;
-		t_list	*aux;
-		t_list	*prueba;
-	
-		node = ft_lstnew(n);
-		ft_lstadd_back(stack_a, node);
-		printf("%d\n", node->n);
-		printf("%d\n", node->order);
-		aux = *stack_a;
-		while(aux->next != NULL)
-		{
-			if(aux->n < node->n)
-				node->order++;
-			if(aux->n > node->n)
-				aux->order++;
-			aux = aux->next;
-		}
-		prueba = *stack_a;
-		printf("%d\n", prueba->n);
-		printf("%d\n", prueba->order);
-		printf("sale\n");
-}
 
 void	ft_tolist(t_list **stack_a, char **array)
 {
@@ -102,19 +78,18 @@ char	**ft_toarray(int argc, char **argv)
 int	main (int argc, char *argv[])
 {
 	int 		n;
-	//size_t	i;
-	//int		x;
-	//size_t	s;
-	//int		content;
 	char		**array;
 	t_list		*stack_a;
 
-	//n = (size_t)argc - 1;
-	printf("Nombre del programa: %s\n", argv[0]);
-	printf("El nº de argumentos es: %d\n", argc);
-	printf("%s\n", argv[1]);
-	printf("%s\n", argv[2]);
-	printf("%s\n", argv[3]);
+
+	// printf("Nombre del programa: %s\n", argv[0]);
+	// printf("El nº de argumentos es: %d\n", argc);
+	// printf("%s\n", argv[1]);
+	// printf("%s\n", argv[2]);
+	// printf("%s\n", argv[3]);
+	
+	if (argc < 2)
+		return (0);
 	array = NULL;
 	stack_a = NULL;
 	n = ft_checkerror(argc, argv);
@@ -130,8 +105,12 @@ int	main (int argc, char *argv[])
 	printf("%s\n", array[2]);
 	
 	ft_tolist(&stack_a, array);
-	// printf("%d\n", stack_a->n);
-	// printf("%d\n", stack_a->order);
+	n = ft_checkorder(&stack_a);
+	if (n != 0)
+	{
+		ft_werror(array);
+		return (0);
+	}
 	ft_free_end(array);
 	ft_lstclear(&stack_a);
 	return (0);

@@ -6,13 +6,28 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/06 15:58:35 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/08 13:36:03 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
 
 //Checks if every arg is clear of the rest of chars. 
+
+int	ft_checkorder(t_list **stack_a)
+{
+	t_list	*aux;
+
+	aux = *stack_a;
+	while (aux->next != NULL && aux->n < aux->next->n)
+	{
+		aux = aux->next;
+	}
+	if (aux->next == NULL)
+		return (-1);
+	else
+		return (0);
+}
 
 int	ft_checknum(int argc, char **argv)
 {
