@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:38 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/12 12:39:55 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/12 15:02:40 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void	ft_createnode(t_list **stack_a, int n)
 	
 		node = ft_lstnew(n);
 		ft_lstadd_back(stack_a, node);
-		printf("%d\n", node->n);
-		printf("%d\n", node->order);
+		// printf("%d\n", node->n);
+		// printf("%d\n", node->order);
 		aux = *stack_a;
 		while(aux->next != NULL)
 		{
@@ -65,7 +65,7 @@ void	ft_createnode(t_list **stack_a, int n)
 			aux = aux->next;
 		}
 		prueba = *stack_a;
-		printf("%d\n", prueba->n);
-		printf("%d\n", prueba->order);
-		printf("sale\n");
+		// printf("%d\n", prueba->n);
+		// printf("%d\n", prueba->order);
+		// printf("sale\n");
 }
