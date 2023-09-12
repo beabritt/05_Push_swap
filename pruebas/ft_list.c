@@ -6,11 +6,12 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:38 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/08 12:26:25 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/12 12:39:55 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
+
 
 void	ft_lstadd_back(t_list **stack_a, t_list *node)
 {

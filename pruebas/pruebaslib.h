@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/08 13:35:07 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/12 13:00:08 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,10 @@ void    ft_tolist(t_list **stack_a, char **array);
 void    ft_createnode(t_list **stack_a, int n);
 int 	ft_checkorder(t_list **stack_a);
 
+void    ft_swap(t_list **stack);
 
+
+void	print_list(t_list **stack);
 
 
 

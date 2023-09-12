@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:23 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/08 13:46:35 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/12 13:22:42 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	main (int argc, char *argv[])
 	// printf("%s\n", argv[1]);
 	// printf("%s\n", argv[2]);
 	// printf("%s\n", argv[3]);
-	
+	system("leaks a.out");
 	if (argc < 2)
 		return (0);
 	array = NULL;
@@ -111,6 +111,11 @@ int	main (int argc, char *argv[])
 		ft_werror(array);
 		return (0);
 	}
+	printf("print_list:\n");
+	print_list(&stack_a);
+	printf("swap:\n");
+	ft_swap(&stack_a);
+	print_list(&stack_a);
 	ft_free_end(array);
 	ft_lstclear(&stack_a);
 	return (0);
