@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:23 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/12 18:03:42 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/12 18:53:50 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_tolist(t_list **stack_a, char **array)
 	size_t	i;
 	size_t	x;
 	int		n;
-	t_list	*prueba;
+	//t_list	*aux;
 
 	i = 0;
 	n = 0;
@@ -30,15 +30,15 @@ void	ft_tolist(t_list **stack_a, char **array)
 		ft_createnode(stack_a, n);
 		i++;
 	}
-	prueba = *stack_a;
-	printf("%d\n", prueba->n);
-	printf("%d\n", prueba->order);
-	prueba = prueba->next;
-	printf("%d\n", prueba->n);
-	printf("%d\n", prueba->order);
-	prueba = prueba->next;
-	printf("%d\n", prueba->n);
-	printf("%d\n", prueba->order);
+	/*aux = *stack_a;
+	printf("%d\n", aux->n);
+	printf("%d\n", aux->order);
+	aux = aux->next;
+	printf("%d\n", aux->n);
+	printf("%d\n", aux->order);
+	aux = aux->next;
+	printf("%d\n", aux->n);
+	printf("%d\n", aux->order);*/
 }
 
 char	*ft_toarray2(int argc, char **argv)
@@ -102,7 +102,7 @@ int	main (int argc, char *argv[])
 		ft_werror(array);
 		return (0);
 	}
-	array = ft_toarray(argc, argv);	
+	array = ft_toarray(argc, argv);
 	ft_tolist(&stack_a, array);
 	n = ft_checkorder(&stack_a);
 	if (n != 0)
