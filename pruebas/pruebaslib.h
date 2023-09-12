@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/12 17:29:20 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/12 17:56:16 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ t_list	*ft_lstlast(t_list *lst);
 void    ft_swap(t_list **stack);
 void	ft_push(t_list **stack1, t_list **stack2);
 void	ft_rotate(t_list **stack);
+void	ft_revrotate(t_list **stack);
 
 
 void	print_list(t_list **stack);
