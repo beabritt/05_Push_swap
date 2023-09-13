@@ -14,23 +14,24 @@
 
 void    sa(t_list **stack_a)
 {
-    ft_swap(&stack_a);
+    ft_swap(stack_a);
 }
 void    sb(t_list **stack_b)
 {
-    ft_swap(&stack_b);
+    ft_swap(stack_b);
 }
 void    ss(t_list **stack_a, t_list **stack_b)
 {
-    ft_swap(&stack_a);
-    ft_swap(&stack_b);
+    ft_swap(stack_a);
+    ft_swap(stack_b);
 }
-void    pa(t_list **stack_a, t_list **stack_b)
+
+void    pa(t_list **stack_b, t_list **stack_a)
 {
-    ft_push(&stack_a, &stack_b);
+    ft_push(stack_b, stack_a);
 }
 
 void    pb(t_list **stack_a, t_list **stack_b)
 {
-    ft_push(&stack_b, &stack_a);
+    ft_push(stack_a, stack_b);
 }

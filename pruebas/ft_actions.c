@@ -20,7 +20,8 @@ void    ft_swap(t_list **stack)
 	if (*stack == NULL)
 		return;	
     aux = *stack;
-
+	if (aux->next == NULL)
+		return;
 	kpr = aux->next;
 	aux->next = aux->next->next;
 	kpr->next = aux;
@@ -65,6 +66,8 @@ void	ft_rotate(t_list **stack)
 	t_list	*last;
 
 	aux = *stack;
+	if (aux->next == NULL)
+		return;
 	kpr = aux->next;
 	last = ft_lstlast(aux);
 	last->next = aux;
@@ -78,6 +81,8 @@ void	ft_revrotate(t_list **stack)
 	t_list	*kpr;
 	
 	aux = *stack;
+	if (aux->next == NULL)
+		return;
 	kpr = ft_lstlast(aux);
 	kpr->next = aux;
 	aux = kpr;

@@ -49,7 +49,6 @@ void	ft_createnode(t_list **stack_a, int n)
 {
 		t_list	*node;
 		t_list	*aux;
-		t_list	*prueba;
 	
 		node = ft_lstnew(n);
 		ft_lstadd_back(stack_a, node);
@@ -64,7 +63,7 @@ void	ft_createnode(t_list **stack_a, int n)
 				aux->order++;
 			aux = aux->next;
 		}
-		prueba = *stack_a;
+		aux = *stack_a;
 		// printf("%d\n", prueba->n);
 		// printf("%d\n", prueba->order);
 		// printf("sale\n");

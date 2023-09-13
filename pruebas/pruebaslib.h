@@ -24,7 +24,7 @@ typedef struct s_list
     struct s_list   *next;
 }   t_list;
 
-
+//String and array functions
 char	**ft_split(char const *s, char c);
 size_t	ft_wcounter(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -61,14 +61,30 @@ void    ft_tolist(t_list **stack_a, char **array);
 void    ft_createnode(t_list **stack_a, int n);
 t_list	*ft_lstlast(t_list *lst);
 
-//Movements
+//Actions
 void    ft_swap(t_list **stack);
 void	ft_push(t_list **stack1, t_list **stack2);
 void	ft_rotate(t_list **stack);
 void	ft_revrotate(t_list **stack);
 
+//Movements
+void    sa(t_list **stack_a);
+void    sb(t_list **stack_b);
+void    ss(t_list **stack_a, t_list **stack_b);
+void    pa(t_list **stack_b, t_list **stack_a);
+void    pb(t_list **stack_a, t_list **stack_b);
+void	ra (t_list	**stack_a);
+void	rb (t_list **stack_b);
+void	rr (t_list **stack_a, t_list **stack_b);
+void	rra (t_list **stack_a);
+void	rrb (t_list **stack_b);
+void    rrr (t_list **stack_a, t_list **stack_b);
+
+
 
 void	print_list(t_list **stack);
+
+
 
 
 

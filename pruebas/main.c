@@ -112,13 +112,13 @@ int	main (int argc, char *argv[])
 	}
 	printf("print_list:\n");
 	print_list(&stack_a);
-	//ft_swap(&stack_a);
 	stack_b = ft_lstnew(x);
-	printf("llega\n");
-	// printf("push:\n");
-	// ft_push(&stack_a, &stack_b);
-	// printf(rotate:\n");
-	ft_revrotate(&stack_a);
+	//printf("swap a y b:\n");
+	//ss(&stack_a, &stack_b);
+	//printf("push:\n");
+	//pb(&stack_a, &stack_b);
+	printf("rev rotate:\n");
+	rrr(&stack_a, &stack_b);
 	printf("stack a:\n");
 	print_list(&stack_a);
 	printf("stack b:\n");
