@@ -36,6 +36,8 @@ void	ft_push(t_list **stack1, t_list **stack2)
 	
 	aux = *stack1;
 	aux2 = *stack2;
+	if(*stack1 == NULL)
+		return;
 	if (*stack2 == NULL)
 	{
 		kpr = aux->next;

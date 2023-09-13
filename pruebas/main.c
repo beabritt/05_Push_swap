@@ -89,7 +89,7 @@ int	main (int argc, char *argv[])
 	// printf("%s\n", argv[3]);
 	
 	//system("leaks a.out");
-	if (argc < 3)
+	if (argc < 2)
 		return (0);
 	x = 5;
 	array = NULL;
@@ -115,10 +115,13 @@ int	main (int argc, char *argv[])
 	stack_b = ft_lstnew(x);
 	//printf("swap a y b:\n");
 	//ss(&stack_a, &stack_b);
-	//printf("push:\n");
-	//pb(&stack_a, &stack_b);
-	printf("rev rotate:\n");
-	rrr(&stack_a, &stack_b);
+	printf("push:\n");
+	pb(&stack_a, &stack_b);
+	pb(&stack_a, &stack_b);
+	pb(&stack_a, &stack_b);
+	pb(&stack_a, &stack_b);
+	//printf("rev rotate:\n");
+	//rrr(&stack_a, &stack_b);
 	printf("stack a:\n");
 	print_list(&stack_a);
 	printf("stack b:\n");
