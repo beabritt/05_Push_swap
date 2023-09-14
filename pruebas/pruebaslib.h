@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/12 17:56:16 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:49:54 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,14 @@ void	rra (t_list **stack_a);
 void	rrb (t_list **stack_b);
 void    rrr (t_list **stack_a, t_list **stack_b);
 
+//Allgorithm.
+void	ft_deliver(t_list **stack_a, t_list **stack_b, int counter);
+t_list	*ft_findhigh(t_list *stack, int count);
+void	ft_alg_one(t_list **stack_a, int count);
 
-
+//Delete
 void	print_list(t_list **stack);
+
 
 
 
