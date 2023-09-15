@@ -17,10 +17,10 @@ void	ft_deliver(t_list **stack_a, t_list **stack_b, int counter)
 	if (counter <= 3)
 	{
 		*stack_b = NULL;
-		ft_alg_one(stack_a, counter);
+		ft_alg3(stack_a, counter);
 	}
 }
-t_list	*ft_findhigh(t_list *stack, int count)
+t_list	*ft_highestnode(t_list *stack, int count)
 {
 	t_list	*aux;
 	
@@ -34,7 +34,7 @@ t_list	*ft_findhigh(t_list *stack, int count)
 	
 }
 
-void	ft_alg_one(t_list **stack_a, int count)
+void	ft_alg3(t_list **stack_a, int count)
 {
 		t_list	*aux;
 		
@@ -43,9 +43,14 @@ void	ft_alg_one(t_list **stack_a, int count)
 			sa(stack_a);
 		else
 		{
-			aux = ft_findhigh(aux, count);
+			aux = ft_highestnode(aux, count);
 			printf("aux:%d\n", aux->n);
-			rra(stack_a);
+			if (*stack_a == aux)
+				ra(stack_a);
+			else if((*stack_a)->next == aux)
+				rra(stack_a);
+			if ((*stack_a)->order > (*stack_a)->next->order)
+				sa(stack_a);
 		}
 			
 		

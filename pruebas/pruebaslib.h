@@ -82,8 +82,8 @@ void    rrr (t_list **stack_a, t_list **stack_b);
 
 //Allgorithm.
 void	ft_deliver(t_list **stack_a, t_list **stack_b, int counter);
-t_list	*ft_findhigh(t_list *stack, int count);
-void	ft_alg_one(t_list **stack_a, int count);
+t_list	*ft_highestnode(t_list *stack, int count);
+void	ft_alg3(t_list **stack_a, int count);
 
 //Delete
 void	print_list(t_list **stack);
