@@ -5,7 +5,10 @@ void	print_list(t_list **stack)
 	t_list  *aux;
 
     if (*stack == NULL)
+    {
+        printf("(vacio)\n");
         return;
+    }
     aux = *stack;
     while(aux->next != NULL)
     {

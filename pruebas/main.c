@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:23 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/14 17:44:44 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/19 19:14:16 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_toarray(int argc, char **argv)
 int	main (int argc, char *argv[])
 {
 	int 		n;
-	int			x;
+	//int			x;
 	int			count;
 	char		**array;
 	t_list		*stack_a;
@@ -95,7 +95,7 @@ int	main (int argc, char *argv[])
 	array = NULL;
 	stack_a = NULL;
 	stack_b = NULL;
-	x = 5;
+	//x = 5;
 	n = ft_checkerror(argc, argv);
 	printf("Errores: %d\n", n);
 	if (n != 0)
@@ -113,11 +113,15 @@ int	main (int argc, char *argv[])
 	}
 	printf("print_list:\n");
 	print_list(&stack_a);
-	stack_b = ft_lstnew(x);
+	//stack_b = ft_lstnew(x);
 	count = ft_lstsize(stack_a);
 	printf("list ordenada:\n");
 	ft_deliver(&stack_a, &stack_b, count);
+	printf("FINAL:\n");
+	printf("stack_a:\n");
 	print_list(&stack_a);
+	printf("stack_b:\n");
+	print_list(&stack_b);
 	//printf("swap a y b:\n");
 	//ss(&stack_a, &stack_b);
 	// printf("push:\n");

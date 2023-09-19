@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/14 16:49:54 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:53:37 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,10 @@ void    rrr (t_list **stack_a, t_list **stack_b);
 
 //Allgorithm.
 void	ft_deliver(t_list **stack_a, t_list **stack_b, int counter);
-t_list	*ft_highestnode(t_list *stack, int count);
+t_list	*ft_highestnode(t_list *stack);
 void	ft_alg3(t_list **stack_a, int count);
+void	ft_alg4(t_list **stack_a, t_list **stack_b, int counter);
+int		smallest_pos(t_list **stack);
 
 //Delete
 void	print_list(t_list **stack);
