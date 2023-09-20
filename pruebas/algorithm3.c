@@ -6,35 +6,30 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:24:04 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/20 19:50:19 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:24:04 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
 
 
-t_list	*ft_highestnode(t_list *stack)
+int		ft_highestorder(t_list *stack)
 {
 	t_list		*aux;
-	int			size;
-	t_list		*higher;
+	int			higher;
 	
 	aux = stack;
-	size = ft_lstsize(stack);
-	higher = aux;
-	while (aux->next != NULL)
+	higher = aux->order;
+	while (aux != NULL)
 	{
-		if (aux->order > higher->order)
+		if (aux->order > higher)
 		{
 			higher = aux;
 		}
 		aux = aux->next;
 	}
-	return (aux);
+	return (higher);
 }
-
-
-
 
 
 /*void	ft_alg4(t_list **stack_a, t_list **stack_b, int counter)
@@ -74,16 +69,18 @@ t_list	*ft_highestnode(t_list *stack)
 void	ft_alg3(t_list **stack_a, int count)
 {
 		t_list	*aux;
+		int		highest;
 		
 		aux = *stack_a;
 		if (count == 2)
 			sa(stack_a);
 		else
 		{
-			aux = ft_highestnode(aux);
-			if (*stack_a == aux)
+			highest = ft_highestorder(aux);
+			printf("El order más alto:%d\n", highest);
+			if ((*stack_a)->order == highest)
 				ra(stack_a);
-			else if((*stack_a)->next == aux)
+			else if((*stack_a)->next->order == highest)
 				rra(stack_a);
 			if ((*stack_a)->order > (*stack_a)->next->order)
 				sa(stack_a);
