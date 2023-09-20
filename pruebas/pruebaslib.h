@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/19 18:53:37 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:17:10 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ typedef struct s_list
     struct s_list   *next;
 }   t_list;
 
+//Main functions
+char	**ft_toarray(int argc, char **argv);
+char	*ft_toarray2(int argc, char **argv);
+void    ft_tolist(t_list **stack_a, char **array);
+void	ft_deliver(t_list **stack_a, t_list **stack_b, int counter);
+
 //String and array functions
 char	**ft_split(char const *s, char c);
 size_t	ft_wcounter(char const *s, char c);
@@ -34,8 +40,6 @@ void	*ft_calloc(size_t n, size_t size);
 int	    ft_strchr(const char *s, int c);
 int	    ft_atoi(const char *str);
 int	    ft_strnstr(const char *haystack, const char *needle, size_t len);
-char	**ft_toarray(int argc, char **argv);
-char	*ft_toarray2(int argc, char **argv);
 int	    ft_slen(int argc, char **argv);
 char	*ft_strjoin_ps(char const *s1, char const *s2);
 int	    ft_arrlen(char **array);
@@ -57,7 +61,6 @@ void	ft_lstadd_back(t_list **stack_a, t_list *node);
 int	    ft_lstsize(t_list *lst);
 void	ft_lstclear(t_list **lst);
 void	ft_lstdelone(t_list *lst);
-void    ft_tolist(t_list **stack_a, char **array);
 void    ft_createnode(t_list **stack_a, int n);
 t_list	*ft_lstlast(t_list *lst);
 
@@ -81,11 +84,13 @@ void	rrb (t_list **stack_b);
 void    rrr (t_list **stack_a, t_list **stack_b);
 
 //Allgorithm.
-void	ft_deliver(t_list **stack_a, t_list **stack_b, int counter);
 t_list	*ft_highestnode(t_list *stack);
 void	ft_alg3(t_list **stack_a, int count);
-void	ft_alg4(t_list **stack_a, t_list **stack_b, int counter);
-int		smallest_pos(t_list **stack);
+void	ft_alg5(t_list **stack_a, t_list **stack_b, int counter);
+int		ft_smallest_pos(t_list **stack);
+int		ft_smallest_order(t_list **stack);
+void	ft_pushfirst5(t_list **stack_a, t_list **stack_b);
+void	ft_pushlast5(t_list **stack_a, t_list **stack_b);
 
 //Delete
 void	print_list(t_list **stack);

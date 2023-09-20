@@ -6,12 +6,24 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:23 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/19 19:14:16 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:35:15 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
 
+void	ft_deliver(t_list **stack_a, t_list **stack_b, int counter)
+{
+	if (counter <= 3)
+	{
+		*stack_b = NULL;
+		ft_alg3(stack_a, counter);
+	}
+	if (counter <= 5)
+	{
+		ft_alg5(stack_a, stack_b, counter);
+	}
+}
 
 void	ft_tolist(t_list **stack_a, char **array)
 {

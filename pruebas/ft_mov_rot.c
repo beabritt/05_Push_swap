@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 19:19:50 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/12 19:20:41 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:49:09 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ra (t_list	**stack_a)
 {
 	if (*stack_a == NULL)
 		return;
+	write(1, "ra\n", 3);
 	ft_rotate(stack_a);
 }
 
@@ -23,6 +24,7 @@ void	rb (t_list **stack_b)
 {
 	if (*stack_b == NULL)
 		return;	
+	write(1, "rb\n", 3);
 	ft_rotate(stack_b);
 }
 
@@ -32,6 +34,5 @@ void	rr (t_list **stack_a, t_list **stack_b)
 		ft_rotate(stack_a);
 	if (*stack_b != NULL)
 		ft_rotate(stack_b);
-	else
-		return;
+	write(1, "rr\n", 4);
 }
