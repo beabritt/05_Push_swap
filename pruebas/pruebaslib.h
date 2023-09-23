@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/20 20:15:40 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/23 19:15:48 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,20 @@ void	rrb (t_list **stack_b);
 void    rrr (t_list **stack_a, t_list **stack_b);
 
 //Allgorithm.
-int	    ft_highestorder(t_list *stack);
+int	    ft_highestorder(t_list **stack);
 void	ft_alg3(t_list **stack_a, int count);
 void	ft_alg5(t_list **stack_a, t_list **stack_b, int counter);
 int		ft_smallest_pos(t_list **stack);
 int		ft_smallest_order(t_list **stack);
 void	ft_pushfirst5(t_list **stack_a, t_list **stack_b);
 void	ft_pushlast5(t_list **stack_a, t_list **stack_b);
+void    ft_alg100(t_list **stack_a, t_list **stack_b, int counter);
+void    ft_push_b(t_list **stack_a, t_list **stack_b, int stack_len, int bigger_order);
+int		ft_highest_pos(t_list **stack);
+void	ft_push_a(t_list **stack_a, t_list **stack_b, int highest_order);
+void	ft_push_rev_a(t_list **stack_a, t_list **stack_b, int highest_order);
+int	    ft_counter_bign(t_list **stack_a, int bigger_order);
+void	ft_alg500(t_list **stack_a, t_list **stack_b, int counter);
 
 //Delete
 void	print_list(t_list **stack);

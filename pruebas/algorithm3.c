@@ -6,25 +6,25 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:24:04 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/20 20:24:04 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/23 12:18:39 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pruebaslib.h"
 
-
-int		ft_highestorder(t_list *stack)
+//Finds the highest order of the stack.
+int		ft_highestorder(t_list **stack)
 {
 	t_list		*aux;
 	int			higher;
 	
-	aux = stack;
+	aux = *stack;
 	higher = aux->order;
 	while (aux != NULL)
 	{
 		if (aux->order > higher)
 		{
-			higher = aux;
+			higher = aux->order;
 		}
 		aux = aux->next;
 	}
@@ -76,7 +76,7 @@ void	ft_alg3(t_list **stack_a, int count)
 			sa(stack_a);
 		else
 		{
-			highest = ft_highestorder(aux);
+			highest = ft_highestorder(stack_a);
 			printf("El order más alto:%d\n", highest);
 			if ((*stack_a)->order == highest)
 				ra(stack_a);
