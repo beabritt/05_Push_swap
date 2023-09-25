@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_mov_rot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 12:26:34 by becamino          #+#    #+#             */
-/*   Updated: 2023/07/25 12:26:36 by becamino         ###   ########.fr       */
+/*   Created: 2023/09/12 19:19:50 by becamino          #+#    #+#             */
+/*   Updated: 2023/09/20 19:49:09 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pruebaslib.h"
 
-/*Send s string to a given fd, followed by a line break */
-
-void	ft_putendl_fd(char *s, int fd)
+void	ra (t_list	**stack_a)
 {
-	size_t	slen;
-
-	slen = ft_strlen(s);
-	write(fd, s, slen);
-	write(fd, "\n", 1);
+	if (*stack_a == NULL)
+		return;
+	write(1, "ra\n", 3);
+	ft_rotate(stack_a);
 }
 
-/*int	main(void)
+void	rb (t_list **stack_b)
 {
-	char	str[] = "hace buen dia";
+	if (*stack_b == NULL)
+		return;	
+	write(1, "rb\n", 3);
+	ft_rotate(stack_b);
+}
 
-	ft_putendl_fd(str, 1);
-	return (0);
-}*/
+void	rr (t_list **stack_a, t_list **stack_b)
+{
+	if (*stack_a != NULL)
+		ft_rotate(stack_a);
+	if (*stack_b != NULL)
+		ft_rotate(stack_b);
+	write(1, "rr\n", 4);
+}

@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:53:55 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/23 19:15:48 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/25 12:19:42 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,10 +101,6 @@ void	ft_alg500(t_list **stack_a, t_list **stack_b, int counter);
 
 //Delete
 void	print_list(t_list **stack);
-
-
-
-
 
 
 #endif

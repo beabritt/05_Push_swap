@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_werrors.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 12:25:30 by becamino          #+#    #+#             */
-/*   Updated: 2023/07/26 16:25:04 by becamino         ###   ########.fr       */
+/*   Created: 2023/09/05 12:57:37 by becamino          #+#    #+#             */
+/*   Updated: 2023/09/08 13:34:33 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pruebaslib.h"
 
-//Deletes and free the node 'lst' and consecutives,
-//using 'del' and free. The pointer to the list must be NULL.
-
-/*void	ft_del(void *p)
+void	ft_werror(char  **array)
 {
-	p = (void *)0;
-}*/
-
-void	ft_lstclear(t_list **lst, void (*del)(void *))
-{
-	t_list	*aux;
-
-	if (!*lst || !del)
-		return ;
-	aux = *lst;
-	while (aux != NULL)
-	{
-		aux = aux->next;
-		ft_lstdelone(*lst, del);
-		*lst = aux;
-	}
-	*lst = NULL;
+	write(1, "Error\n", 6);
+	free(array);	
 }
-/*int main(void)
+void    ft_werror_list(t_list **stack_a)
 {
+       write(1, "Error\n", 6);
+       ft_lstclear(stack_a); 
+}
 
-}*/
+void    ft_free_end(char **array)
+{
+    int x;
+
+    x = 0;
+    x = ft_arrlen(array);
+	ft_free(array, x);
+}

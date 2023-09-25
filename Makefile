@@ -10,33 +10,46 @@
 #                                                                              #
 # **************************************************************************** #
 
+# executable.
 NAME = push_swap
 
-SRC =	main.c \
+# directories.
+SRC_DIR =	./srcs/
+OBJS_DIR = ./objs/
 
-LIBFT_PATH = ./libft/libft.a
-OBJS = $(SRC.c=.o)
 DPS = push_swap.h
 
+# alias.
 CC = gcc
-AR = ar -rcs
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
-all: make_libft $(NAME)
+#sources and objects.
+OBJS = $(SRC_DIR.c=.o)
 
-make_libft: @make -sC ./libft
+# commands.
+all: objs $(NAME)
 
+objs:
+	@mkdir -p $(OBJ_DIR)
+
+# compilation.
 $(NAME) : $(OBJS)
 		$(CC) $(NAME) $(OBJS)
+		@echo "compilation complete :D"
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# remove all objects files.
 clean:
-	@$(RM) $(OBJS)
+	@$(RM) $(OBJS_DIR)
+	@echo "objects removed :D"
 
+# remove objects files, executable and directories.
 fclean:
 	@$(RM) $(NAME)
+	@echo "push swap removed D:"
 
+# not files.
 .PHONY: all clean fclean re

@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_mov_rr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 16:55:28 by becamino          #+#    #+#             */
-/*   Updated: 2023/07/18 17:46:17 by becamino         ###   ########.fr       */
+/*   Created: 2023/09/12 19:20:56 by becamino          #+#    #+#             */
+/*   Updated: 2023/09/20 19:49:25 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pruebaslib.h"
 
-//Returns the last node.
-t_list	*ft_lstlast(t_list *lst)
+void	rra (t_list **stack_a)
 {
-	t_list	*last;
-
-	if (!lst)
-		return (NULL);
-	while (lst != NULL)
-	{
-		last = lst;
-		lst = lst->next;
-	}
-	return (last);
+	write(1, "rra\n", 4);
+	ft_revrotate(stack_a);
 }
 
-/*int	main(void)
+void	rrb (t_list **stack_b)
 {
-	t_list	*plst;
-	t_list	*lst;
-	
-	lst = ft_lstlast(plst);
-	printf("%d\n", *(int*)lst->content);
-	return(0);
-}*/
+	write(1, "rrb\n", 4);
+	ft_revrotate(stack_b);
+}
+
+void	rrr (t_list **stack_a, t_list **stack_b)
+{
+	if (*stack_a != NULL)
+		ft_revrotate(stack_a);
+	if (*stack_b != NULL)
+		ft_revrotate(stack_b);
+	write(1, "rrr\n", 4);
+}

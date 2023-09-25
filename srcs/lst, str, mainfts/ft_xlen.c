@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_xlen.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 12:40:32 by becamino          #+#    #+#             */
-/*   Updated: 2023/07/26 12:46:28 by becamino         ###   ########.fr       */
+/*   Created: 2023/09/05 12:52:07 by becamino          #+#    #+#             */
+/*   Updated: 2023/09/08 12:31:30 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pruebaslib.h"
 
-//Iters 'lst' list and applies function 'f' in every node content.
-/*void	ft_zero(void *p)
+int	ft_slen(int argc, char **argv)
 {
-	
-}*/
+	int x;
+	int	len;
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
-{	
-	if (!lst || !(*f))
-		return ;
-	while (lst != NULL)
+	x = 1;
+	len = 0;
+	while (x < argc)
 	{
-		(*f)(lst->content);
-		lst = lst->next;
+		len += ft_strlen(argv[x]) + 1;
+		x++;
 	}
+	return (len);
 }
 
-/*int main(void)
+int	ft_arrlen(char **array)
 {
-	t_list	*lst;
-	int		x;
-	void	*y;
-	void	(*f)(void *);
-	
+	int	x;
 
-	x = 5;
-	y = &x;
-	lst = ft_lstnew(y);
-	f = &ft_zero;
-	return (0);
-}*/
+	x = 0;
+	while(array[x] != NULL)
+	{
+		x++;
+	}
+	return (x);
+}
