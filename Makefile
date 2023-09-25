@@ -13,6 +13,9 @@
 # executable.
 NAME = push_swap
 
+LIBFT = libft
+LIBFTOUT = libft/
+
 # directories.
 SRC_DIR =	./srcs/
 OBJS_DIR = ./objs/
