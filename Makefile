@@ -13,46 +13,59 @@
 # executable.
 NAME = push_swap
 
-LIBFT = libft
-LIBFTOUT = libft/
+LIBFT_PATH = libft/
+LIBFT = $(LIBFT_PATH)libft.a
+INCLUDE = include/
 
-# directories.
-SRC_DIR =	./srcs/
-OBJS_DIR = ./objs/
+# sources
+SRC = push_swap.c ft_checks.c ft_list.c ft_list2.c ft_werrors.c ft_xlen.c \
+			ft_actions.c ft_mov_sp.c ft_mov_rot.c ft_mov_rr.c algorithm3.c \
+			algorithm5.c algorithm100.c algorithm500.c
 
-DPS = push_swap.h
+SRC_DIR =	./srcs/*/
+SRCS = $(addprefix $(SRC_DIR), $(SRC))
+
+# objects.
+OBJ_DIR = obj/
+OBJ = $(SRC_DIR.c=.o)
+OBJS = $(addprefix $(OBJ_DIR), $(OBJ))
 
 # alias.
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
-RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -I ./include -I ./libft/include
+RM = rm -rf
+DPS = push_swap.h
 
-#sources and objects.
-OBJS = $(SRC_DIR.c=.o)
-
-# commands.
-all: objs $(NAME)
-
-objs:
-	@mkdir -p $(OBJ_DIR)
+# command.
+all: $(NAME)
 
 # compilation.
-$(NAME) : $(OBJS)
-		$(CC) $(NAME) $(OBJS)
+$(LIBFT): $(LIBFT_PATH)
+	@make -C $(LIBFT_PATH)
+
+
+$(NAME) : $(OBJS) $(LIBFT)
+		@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 		@echo "compilation complete :D"
 
-%.o : %.c
+
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(LIBFT)
+	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # remove all objects files.
 clean:
+	@make -C $(LIBFT_PATH) clean
 	@$(RM) $(OBJS_DIR)
 	@echo "objects removed :D"
 
 # remove objects files, executable and directories.
-fclean:
+fclean: clean
+	@make -C $(LIBFT_PATH) clean
 	@$(RM) $(NAME)
 	@echo "push swap removed D:"
+
+re: fclean all
 
 # not files.
 .PHONY: all clean fclean re
