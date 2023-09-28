@@ -6,16 +6,16 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:07:47 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 18:35:53 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:56:58 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef struct s_list
 {
@@ -31,15 +31,9 @@ void	ft_tolist(t_list **stack_a, char **array);
 void	ft_deliver(t_list **stack_a, t_list **stack_b);
 
 //String and array functions
-char	**ft_split(char const *s, char c);
 size_t	ft_wcounter(char const *s, char c);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-void	*ft_calloc(size_t n, size_t size);
-int		ft_strchr(const char *s, int c);
-int		ft_atoi(const char *str);
-int		ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_strchr_ps(const char *s, int c);
+int		ft_strnstr_ps(const char *haystack, const char *needle, size_t len);
 int		ft_slen(int argc, char **argv);
 char	*ft_strjoin_ps(char const *s1, char const *s2);
 int		ft_arrlen(char **array);

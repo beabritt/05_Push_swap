@@ -6,11 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:38 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 17:06:49 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:25:16 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	ft_lstadd_back(t_list **stack_a, t_list *node)
 {

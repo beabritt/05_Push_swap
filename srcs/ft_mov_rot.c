@@ -6,11 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 19:19:50 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 17:02:10 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:25:10 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	ra(t_list	**stack_a)
 {

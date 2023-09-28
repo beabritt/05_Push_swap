@@ -6,11 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 17:12:39 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 18:35:27 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:25:13 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	freestacks(t_list **stack_a, t_list **stack_b)
 {

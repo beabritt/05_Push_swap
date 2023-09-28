@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 13:57:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 16:41:34 by becamino         ###   ########.fr       */
+/*   Updated: 2023/01/29 13:58:00 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// writes 'c' value x len in b string.
-
+// Escribe len de valor c (convertidos a un unsigned char) a la cadena b
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	x;
@@ -30,3 +29,16 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+/*int	main(void)
+{
+	char	b [];
+	int		c;
+	size_t	len;
+
+	b = "Hola Pedro";
+	c = 33;
+	len = 5;
+	printf("%s \n", ft_memset(b, c, len));
+	return (0);
+}*/

@@ -6,11 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:24:04 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 16:47:30 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:25:40 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 //Finds the highest order of the stack.
 int	ft_highestorder(t_list **stack)

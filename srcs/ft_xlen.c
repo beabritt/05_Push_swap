@@ -6,11 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:52:07 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 17:09:56 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:24:51 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	ft_slen(int argc, char **argv)
 {

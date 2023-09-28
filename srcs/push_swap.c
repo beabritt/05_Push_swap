@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:05:33 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 18:49:31 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 16:13:16 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	ft_tolist(t_list **stack_a, char **array)
 {
@@ -61,7 +61,7 @@ char	**ft_toarray(int argc, char **argv)
 	return (arr);
 }
 
-int	main(int argc, char *argv[])
+int main (int argc, char *argv[])
 {
 	int			n;
 	char		**array;

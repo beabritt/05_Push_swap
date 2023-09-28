@@ -6,11 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:18:07 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/25 16:51:18 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:25:37 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 //Finds the smallest order in stack_a.
 int	ft_smallest_order(t_list **stack)
