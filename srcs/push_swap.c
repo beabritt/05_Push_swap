@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:05:33 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 16:13:16 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 16:52:51 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,6 @@ int main (int argc, char *argv[])
 		ft_free_end(array);
 	ft_deliver(&stack_a, &stack_b);
 	ft_free_end(array);
-	freestacks(stack_a, stack_b);
+	freestacks(&stack_a, &stack_b);
 	return (0);
 }

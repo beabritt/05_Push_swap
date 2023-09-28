@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 14:27:00 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:25:23 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:55:53 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,11 @@ void	ft_deliver(t_list **stack_a, t_list **stack_b)
 	{
 		*stack_b = NULL;
 		ft_alg3(stack_a, counter);
-		printf("pasa3\n");
 	}
 	else if (counter <= 5)
-	{
 		ft_alg5(stack_a, stack_b, counter);
-		printf("pasa5\n");
-	}
 	else if (counter <= 100)
-	{
 		ft_alg100(stack_a, stack_b, counter);
-	}
 	else
 		ft_alg500(stack_a, stack_b, counter);
 }

@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:24:04 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:25:40 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:56:14 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	ft_alg3(t_list **stack_a, int count)
 	else
 	{
 		highest = ft_highestorder(stack_a);
-		printf("El order más alto:%d\n", highest);
 		if ((*stack_a)->order == highest)
 			ra(stack_a);
 		else if ((*stack_a)->next->order == highest)
