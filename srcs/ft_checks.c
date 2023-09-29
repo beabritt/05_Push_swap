@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 18:55:29 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:21:55 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,14 +88,14 @@ int	ft_checkdupe(int argc, char **argv)
 	int	j;
 	int	yn;
 
-	i = 1;
-	j = 2;
+	i = 0;
+	j = 1;
 	while (i < argc)
 	{
 		while (j < argc)
 		{
-			yn = ft_strnstr_ps(argv[j], argv[i], ft_strlen(argv[j]));
-			if (yn == -1)
+			yn = argv[i] - argv[j];
+			if (yn == 0)
 				return (-1);
 			j++;
 		}

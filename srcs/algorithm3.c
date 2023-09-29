@@ -6,11 +6,30 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:24:04 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 18:56:14 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:51:15 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int	ft_calculate_fastest(int f_pos,int s_pos,int counter)
+{
+	int	middle;
+
+	middle = counter / 2;
+	if (f_pos <= middle)
+		f_pos = middle - f_pos;
+	else
+		f_pos = counter - f_pos;
+	if (s_pos <= middle)
+		s_pos = middle - s_pos;
+	else
+		s_pos = counter - s_pos;
+	if (f_pos < s_pos)
+		return (f_pos);
+	else
+		return (s_pos);
+}
 
 //Finds the highest order of the stack.
 int	ft_highestorder(t_list **stack)

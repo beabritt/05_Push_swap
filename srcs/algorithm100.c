@@ -6,11 +6,28 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 12:19:34 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:25:32 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:52:01 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int	ft_compare(t_list **stack)
+{
+	int		counter;
+	int		first;
+	int		second;
+	int		f_pos;
+	int		s_pos;
+	
+	counter = ft_lstsize(*stack);
+	first = ft_smallest_order(stack);
+	second = ft_2ndsmallest_order(stack, first);
+	f_pos = ft_find_pos(stack, first);
+	s_pos = ft_find_pos(stack, second);
+	first = ft_calculate_fastest(f_pos, s_pos, counter);
+	return (first);
+}
 
 int	ft_highest_pos(t_list **stack)
 {
@@ -35,7 +52,8 @@ int	ft_highest_pos(t_list **stack)
 	}
 	return (highest_pos);
 }
-
+//returns count, the number of numbers smaller than biggest one
+//in the chunk.
 int	ft_counter_bign(t_list **stack_a, int bigger_order)
 {
 	t_list	*aux;
@@ -63,6 +81,7 @@ void	ft_push_b(t_list **stack_a, t_list **stack_b, int stack_len,
 	count = ft_counter_bign(stack_a, big_order);
 	while (i < count)
 	{
+		
 		if ((*stack_a)->order <= big_order)
 		{
 			pb(stack_a, stack_b);
@@ -70,7 +89,7 @@ void	ft_push_b(t_list **stack_a, t_list **stack_b, int stack_len,
 		}
 		else
 		{
-			next = ft_smallest_pos(stack_a);
+			next = ft_compare(stack_a);
 			if (next < stack_len / 2)
 				ra(stack_a);
 			else
@@ -79,6 +98,8 @@ void	ft_push_b(t_list **stack_a, t_list **stack_b, int stack_len,
 	}
 }
 
+//bigger_order is the bigger number to search in every chunk.
+//4ex, in the first chunk will search to 25, second 50, etc. 
 void	ft_alg100(t_list **stack_a, t_list **stack_b, int counter)
 {
 	int		chunk;
@@ -93,6 +114,8 @@ void	ft_alg100(t_list **stack_a, t_list **stack_b, int counter)
 		ft_push_b(stack_a, stack_b, counter, bigger_order);
 		bigger_order += chunk;
 	}
+	printf("vacía stack_a\n");
+	printf("%d\n", ft_lstsize(*stack_b));
 	while (ft_lstsize(*stack_b) > 0)
 	{
 		highest_order = ft_highestorder(stack_b);
@@ -101,5 +124,6 @@ void	ft_alg100(t_list **stack_a, t_list **stack_b, int counter)
 			ft_push_a(stack_a, stack_b, highest_order);
 		else
 			ft_push_rev_a(stack_a, stack_b, highest_order);
+		counter--;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:07:47 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:56:58 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:52:36 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
+#include <stdio.h>
 
 typedef struct s_list
 {
@@ -40,10 +41,11 @@ int		ft_arrlen(char **array);
 
 //Errors and free functions
 void	*ft_free(char **arr, size_t a);
-void	ft_werror(char **array);
+void	ft_werror(void);
 void	ft_werror_list(t_list **stack_a);
 void	ft_free_end(char **array);
 void	freestacks(t_list **stack_a, t_list **stack_b);
+void	ft_free_mtx(char **array, int i);
 //Check errors
 int		ft_checkerror(int argc, char **argv);
 int		ft_checknum(int argc, char **argv);
@@ -93,6 +95,11 @@ int		ft_highest_pos(t_list **stack);
 void	ft_push_a(t_list **stack_a, t_list **stack_b, int highest_order);
 void	ft_push_rev_a(t_list **stack_a, t_list **stack_b, int highest_order);
 int		ft_counter_bign(t_list **stack_a, int bigger_order);
+int		ft_2ndsmallest_order(t_list **stack, int first_smaller);
+int		ft_compare(t_list **stack);
+int		ft_find_pos(t_list **stack, int order);
+int		ft_calculate_fastest(int f_pos,int s_pos,int counter);
+int		ft_2ndbigger_order(t_list **stack, int first);
 void	ft_alg500(t_list **stack_a, t_list **stack_b, int counter);
 
 #endif

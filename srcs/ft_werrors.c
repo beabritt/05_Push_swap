@@ -6,16 +6,15 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:57:37 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:24:58 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:09:59 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ft_werror(char **array)
+void	ft_werror(void)
 {
 	write(2, "Error\n", 6);
-	free(array);
 	exit(0);
 }
 
