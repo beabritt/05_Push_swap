@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 19:50:59 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 20:52:55 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:05:45 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_find_pos(t_list **stack, int order)
 {
 	t_list	*aux;
 	int		i;
-	
+
 	i = 1;
 	aux = *stack;
 	while (aux->order != order)
@@ -38,7 +38,6 @@ int	ft_2ndsmallest_order(t_list **stack, int first_smaller)
 		aux = aux->next;
 	}
 	second_smaller = aux->order;
-	
 	return (second_smaller);
 }
 
@@ -58,37 +57,6 @@ void	ft_push_a(t_list **stack_a, t_list **stack_b, int highest_order)
 		rb (stack_b);
 	}
 	pa(stack_b, stack_a);
-}
-int	ft_2ndbigger_order(t_list **stack, int first)
-{
-	t_list	*aux;
-	int		second_bigger;
-
-	aux = *stack;
-	while (aux->order != first - 1)
-	{
-		aux = aux->next;
-	}
-	second_bigger = aux->order;
-	
-	return (second_bigger);
-}
-
-int	ft_compare_b(t_list **stack)
-{
-	int		counter;
-	int		first;
-	int		second;
-	int		f_pos;
-	int		s_pos;
-	
-	counter = ft_lstsize(*stack);
-	first = ft_highestorder(stack);
-	second = ft_2ndbigger_order(stack, first);
-	f_pos = ft_find_pos(stack, first);
-	s_pos = ft_find_pos(stack, second);
-	first = ft_calculate_fastest(f_pos, s_pos, counter);
-	return (first);
 }
 
 void	ft_alg500(t_list **stack_a, t_list **stack_b, int counter)
@@ -110,7 +78,7 @@ void	ft_alg500(t_list **stack_a, t_list **stack_b, int counter)
 		highest_order = ft_highestorder(stack_b);
 		highest_pos = ft_highest_pos(stack_b);
 		if (highest_pos < counter / 2)
-			ft_push_a(stack_a, stack_b,highest_order);
+			ft_push_a(stack_a, stack_b, highest_order);
 		else
 			ft_push_rev_a(stack_a, stack_b, highest_order);
 		counter--;

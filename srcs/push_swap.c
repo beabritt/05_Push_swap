@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:05:33 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 19:23:14 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:14:50 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,19 +65,20 @@ char	**ft_toarray(int argc, char **argv)
 	free(s);
 	return (arr);
 }
+
 void	leaks()
 {
 	system("leaks -q push_swap");
 }
 
-int main (int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	int			n;
 	char		**array;
 	t_list		*stack_a;
 	t_list		*stack_b;
 
-	//atexit(leaks);
+	atexit(leaks);
 	if (argc < 2)
 		return (0);
 	array = NULL;

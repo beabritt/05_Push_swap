@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 12:19:34 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 20:52:01 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:12:22 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_compare(t_list **stack)
 	int		second;
 	int		f_pos;
 	int		s_pos;
-	
+
 	counter = ft_lstsize(*stack);
 	first = ft_smallest_order(stack);
 	second = ft_2ndsmallest_order(stack, first);
@@ -52,6 +52,7 @@ int	ft_highest_pos(t_list **stack)
 	}
 	return (highest_pos);
 }
+
 //returns count, the number of numbers smaller than biggest one
 //in the chunk.
 int	ft_counter_bign(t_list **stack_a, int bigger_order)
@@ -81,7 +82,6 @@ void	ft_push_b(t_list **stack_a, t_list **stack_b, int stack_len,
 	count = ft_counter_bign(stack_a, big_order);
 	while (i < count)
 	{
-		
 		if ((*stack_a)->order <= big_order)
 		{
 			pb(stack_a, stack_b);
@@ -114,8 +114,6 @@ void	ft_alg100(t_list **stack_a, t_list **stack_b, int counter)
 		ft_push_b(stack_a, stack_b, counter, bigger_order);
 		bigger_order += chunk;
 	}
-	printf("vacía stack_a\n");
-	printf("%d\n", ft_lstsize(*stack_b));
 	while (ft_lstsize(*stack_b) > 0)
 	{
 		highest_order = ft_highestorder(stack_b);

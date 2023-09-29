@@ -6,13 +6,13 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:24:04 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 20:51:15 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:02:43 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_calculate_fastest(int f_pos,int s_pos,int counter)
+int	ft_calculate_fastest(int f_pos, int s_pos, int counter)
 {
 	int	middle;
 

@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:07:47 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 20:52:36 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:15:49 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include "../libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
-#include <stdio.h>
 
 typedef struct s_list
 {
@@ -98,8 +97,7 @@ int		ft_counter_bign(t_list **stack_a, int bigger_order);
 int		ft_2ndsmallest_order(t_list **stack, int first_smaller);
 int		ft_compare(t_list **stack);
 int		ft_find_pos(t_list **stack, int order);
-int		ft_calculate_fastest(int f_pos,int s_pos,int counter);
-int		ft_2ndbigger_order(t_list **stack, int first);
+int		ft_calculate_fastest(int f_pos, int s_pos, int counter);
 void	ft_alg500(t_list **stack_a, t_list **stack_b, int counter);
 
 #endif
