@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 16:07:03 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 16:47:18 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/06 18:34:25 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	ft_wcounter(char const *s, char c)
 	return (cont);
 }
 
-void	*ft_free(char **arr, size_t a)
+static void	*ft_free(char **arr, size_t a)
 {
 	while (!arr[a])
 	{
@@ -81,6 +81,7 @@ char	**ft_split(char const *s, char c)
 			return (ft_free(arr, a));
 		a++;
 	}
+	arr[a] = NULL;
 	return (arr);
 }
 

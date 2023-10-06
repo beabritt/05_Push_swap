@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 19:21:55 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/06 18:50:25 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,33 @@ int	ft_checkorder(t_list **stack_a)
 		aux = aux->next;
 	}
 	if (aux->next == NULL)
-		return (-1);
+		return (ORDERED);
 	else
-		return (0);
+		return (NOT_ORDERED);
 }
+int	ft_checkdupes(t_list **stack_a)
+{
+	t_list	*aux;
+	t_list	*aux2;
+
+	aux = *stack_a;
+	while(aux->next != NULL)
+	{
+		aux2 = aux->next;
+		while(aux2 != NULL)
+		{
+			if (aux->n == aux2->n)
+			{	
+				write(1, "Error\n", 6);
+				return(ERROR);
+			}
+			aux2 = aux2->next;
+		}
+		aux = aux->next;
+	}
+	return (NO_ERROR);
+}
+
 
 int	ft_checknum(int argc, char **argv)
 {
@@ -49,11 +72,11 @@ int	ft_checknum(int argc, char **argv)
 				|| (argv[i][j] >= '0' && argv[i][j] <= '9'))
 				j++;
 			else
-				return (-1);
+				return (ERROR);
 		}
 		i++;
 	}
-	return (0);
+	return (NO_ERROR);
 }
 
 int	ft_checkmaxmin(int argc, char **argv)
@@ -75,48 +98,20 @@ int	ft_checkmaxmin(int argc, char **argv)
 		{
 			minus = ft_atoi(argv[i]);
 			if (minus > 0)
-				return (-1);
+				return (ERROR);
 		}
 		i++;
 	}
-	return (0);
+	return (NO_ERROR);
 }
 
-int	ft_checkdupe(int argc, char **argv)
-{
-	int	i;
-	int	j;
-	int	yn;
-
-	i = 0;
-	j = 1;
-	while (i < argc)
-	{
-		while (j < argc)
-		{
-			yn = argv[i] - argv[j];
-			if (yn == 0)
-				return (-1);
-			j++;
-		}
-		i++;
-	}
-	return (0);
-}
 
 //Check errors. 0 is ok, -1 is error.
 int	ft_checkerror(int argc, char **argv)
 {
-	int	yn;
-
-	yn = ft_checknum(argc, argv);
-	if (yn != 0)
-		return (yn);
-	yn = ft_checkmaxmin(argc, argv);
-	if (yn != 0)
-		return (yn);
-	yn = ft_checkdupe(argc, argv);
-	if (yn != 0)
-		return (yn);
-	return (yn);
+	if  (ERROR == ft_checknum(argc, argv))
+		return(ERROR);
+	if  (ERROR == ft_checkmaxmin(argc, argv))
+		return(ERROR);
+	return (NO_ERROR);
 }

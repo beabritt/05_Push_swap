@@ -6,12 +6,11 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:05:33 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 21:14:50 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/06 18:51:57 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
 void	ft_tolist(t_list **stack_a, char **array)
 {
@@ -28,7 +27,6 @@ void	ft_tolist(t_list **stack_a, char **array)
 		ft_createnode(stack_a, n);
 		i++;
 	}
-	ft_free_mtx(array, i);
 }
 
 char	*ft_toarray2(int argc, char **argv)
@@ -65,15 +63,13 @@ char	**ft_toarray(int argc, char **argv)
 	free(s);
 	return (arr);
 }
-
 void	leaks()
 {
 	system("leaks -q push_swap");
 }
 
-int	main(int argc, char *argv[])
+int main (int argc, char *argv[])
 {
-	int			n;
 	char		**array;
 	t_list		*stack_a;
 	t_list		*stack_b;
@@ -84,15 +80,16 @@ int	main(int argc, char *argv[])
 	array = NULL;
 	stack_a = NULL;
 	stack_b = NULL;
-	n = ft_checkerror(argc, argv);
-	if (n != 0)
-		ft_werror();
-	array = ft_toarray(argc, argv);
-	ft_tolist(&stack_a, array);
-	n = ft_checkorder(&stack_a);
-	if (n != 0)
+	if (ft_checkerror(argc, argv) == ERROR)
+		write(2, "Error\n", 6);
+	else
+	{
+		array = ft_toarray(argc, argv);
+		ft_tolist(&stack_a, array);
+		if ((NOT_ORDERED == ft_checkorder(&stack_a)) && (NO_ERROR == ft_checkdupes(&stack_a)))
+			ft_deliver(&stack_a, &stack_b);
 		ft_free_end(array);
-	ft_deliver(&stack_a, &stack_b);
+	}
 	freestacks(&stack_a, &stack_b);
 	return (0);
 }

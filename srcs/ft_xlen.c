@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:52:07 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 19:04:15 by becamino         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:24:51 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,4 @@ int	ft_arrlen(char **array)
 		x++;
 	}
 	return (x);
-}
-
-void	ft_free_mtx(char **array, int i)
-{
-	while (i >= 0)
-	{
-		free (array[i]);
-		--i;
-	}
-	free(array);
 }

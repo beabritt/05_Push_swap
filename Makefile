@@ -14,14 +14,16 @@
 LIB =   ar rcs
 RM  =   rm -f
 CC  =   gcc
-CFLAGS  =   -Wall -Wextra -Werror -I ./include -I ./libft/
-DEBUG   =   -g3 -fsanitize=address
+CFLAGS  =   -Wall -Wextra -Werror  -I ./include -I ./libft/ ${DEBUG}
+# DEBUG   =   -g3 -fsanitize=address
+# DEBUG   =   -g
+DEBUG   =   
 NAME    =   push_swap
 
 # sources and objects.
 RR  =   push_swap.c ft_checks.c ft_list.c ft_list2.c ft_werrors.c ft_xlen.c \
             ft_actions.c ft_mov_sp.c ft_mov_rot.c ft_mov_rr.c algorithm3.c \
-            algorithm5.c algorithm100.c algorithm500.c str_mod.c
+            algorithm5.c algorithm100.c algorithm500.c str_mod.c print_list.c
 SRCR_DIR    =   ./srcs/
 SRCR    =   $(addprefix $(SRCR_DIR), $(RR))
 OBJ_DIR =   ./obj/
