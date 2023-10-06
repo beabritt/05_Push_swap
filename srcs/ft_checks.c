@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/06 18:50:25 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/06 19:06:25 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,22 @@ int	ft_checkorder(t_list **stack_a)
 	else
 		return (NOT_ORDERED);
 }
+
 int	ft_checkdupes(t_list **stack_a)
 {
 	t_list	*aux;
 	t_list	*aux2;
 
 	aux = *stack_a;
-	while(aux->next != NULL)
+	while (aux->next != NULL)
 	{
 		aux2 = aux->next;
-		while(aux2 != NULL)
+		while (aux2 != NULL)
 		{
 			if (aux->n == aux2->n)
 			{	
 				write(1, "Error\n", 6);
-				return(ERROR);
+				return (ERROR);
 			}
 			aux2 = aux2->next;
 		}
@@ -49,7 +50,6 @@ int	ft_checkdupes(t_list **stack_a)
 	}
 	return (NO_ERROR);
 }
-
 
 int	ft_checknum(int argc, char **argv)
 {
@@ -105,13 +105,12 @@ int	ft_checkmaxmin(int argc, char **argv)
 	return (NO_ERROR);
 }
 
-
 //Check errors. 0 is ok, -1 is error.
 int	ft_checkerror(int argc, char **argv)
 {
-	if  (ERROR == ft_checknum(argc, argv))
-		return(ERROR);
-	if  (ERROR == ft_checkmaxmin(argc, argv))
-		return(ERROR);
+	if (ERROR == ft_checknum(argc, argv))
+		return (ERROR);
+	if (ERROR == ft_checkmaxmin(argc, argv))
+		return (ERROR);
 	return (NO_ERROR);
 }

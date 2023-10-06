@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:57:37 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/06 18:37:56 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/06 19:07:40 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	ft_free_end(char **array)
 	int	x;
 
 	x = 0;
-	while (array[x] != NULL){
+	while (array[x] != NULL)
+	{
 		free(array[x]);
 		array[x] = NULL;
 		x++;
