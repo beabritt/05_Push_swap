@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:05:33 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/06 19:14:41 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/27 12:34:36 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,16 @@ int	main(int argc, char *argv[])
 	t_list		*stack_a;
 	t_list		*stack_b;
 
-	atexit(leaks);
+	//atexit(leaks);
 	if (argc < 2)
-		return (0);
+		exit (1);
+	if (argv[1][0] == '\0')
+		ft_error();
 	array = NULL;
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ft_checkerror(argc, argv) == ERROR)
-		write(2, "Error\n", 6);
+		ft_error();
 	else
 	{
 		array = ft_toarray(argc, argv);

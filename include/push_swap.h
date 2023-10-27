@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:07:47 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/06 18:38:02 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:12:39 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,16 @@ int		ft_arrlen(char **array);
 //Errors and free functions
 void	ft_free_end(char **array);
 void	freestacks(t_list **stack_a, t_list **stack_b);
+
 //Check errors
 int		ft_checkerror(int argc, char **argv);
 int		ft_checknum(int argc, char **argv);
 int		ft_checkmaxmin(int argc, char **argv);
 int		ft_checkdupes(t_list **stack_a);
 int		ft_checkorder(t_list **stack_a);
+void	ft_error(void);
+int		ft_onlyspaces(char **argv);
+
 //Lists functions
 t_list	*ft_lstnew(int content);
 void	ft_lstadd_back(t_list **stack_a, t_list *node);

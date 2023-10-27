@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/06 19:06:25 by becamino         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:14:27 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,8 @@ int	ft_checkmaxmin(int argc, char **argv)
 //Check errors. 0 is ok, -1 is error.
 int	ft_checkerror(int argc, char **argv)
 {
+	if (ERROR == ft_onlyspaces(argv))
+		return (ERROR);
 	if (ERROR == ft_checknum(argc, argv))
 		return (ERROR);
 	if (ERROR == ft_checkmaxmin(argc, argv))
