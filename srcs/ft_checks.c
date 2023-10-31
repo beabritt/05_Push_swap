@@ -62,10 +62,11 @@ int	ft_checknum(int argc, char **argv)
 		j = 0;
 		while (argv[i][j] != '\0')
 		{	
-			while (argv[i][j] == '-')
+			while (argv[i][j] == '-' || argv[i][j] == '+')
 			{
 				j++;
-				if (argv[i][j] == '-' || argv[i][j] == ' ')
+				if (argv[i][j] == '-' || argv[i][j] == ' ' 
+					|| argv[i][j] == '+')
 					return (-1);
 			}
 			if (argv[i][j] == ' ' || argv[i][j] == '-'

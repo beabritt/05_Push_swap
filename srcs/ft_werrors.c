@@ -19,7 +19,7 @@ int	ft_onlyspaces(char **argv)
 
 	i = 0;
 	j = 0;
-	while (argv[i] != '\0')
+	while (argv[i] != (void*)0)
 	{
 		while (argv[i][j] != '\0' && argv[i][j] == ' ')
 		{			

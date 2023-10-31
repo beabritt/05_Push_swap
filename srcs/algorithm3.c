@@ -52,10 +52,8 @@ int	ft_highestorder(t_list **stack)
 
 void	ft_alg3(t_list **stack_a, int count)
 {
-	t_list	*aux;
 	int		highest;
 
-	aux = *stack_a;
 	if (count == 2)
 		sa(stack_a);
 	else
