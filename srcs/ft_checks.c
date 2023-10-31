@@ -41,8 +41,9 @@ int	ft_checkdupes(t_list **stack_a)
 		{
 			if (aux->n == aux2->n)
 			{	
-				write(1, "Error\n", 6);
-				return (ERROR);
+				write(2, "Error\n", 6);
+				//return (ERROR);
+				exit(EXIT_FAILURE);
 			}
 			aux2 = aux2->next;
 		}

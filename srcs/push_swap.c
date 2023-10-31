@@ -75,7 +75,7 @@ int	main(int argc, char *argv[])
 	t_list		*stack_a;
 	t_list		*stack_b;
 
-	//atexit(leaks);
+	atexit(leaks);
 	if (argc < 2)
 		exit (1);
 	if (argv[1][0] == '\0')
@@ -96,4 +96,5 @@ int	main(int argc, char *argv[])
 	}
 	freestacks(&stack_a, &stack_b);
 	return (0);
+	//exit(EXIT_SUCCESS);
 }
