@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:23:26 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/13 16:23:31 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:29:02 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
 #include "libft.h"
 /*size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
@@ -29,14 +29,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dest == (void *)0 && source == (void *)0)
 		return (NULL);
 	if (dst < src)
-	{	
+	{
 		ft_memcpy (dst, src, len);
 		return (dst);
 	}
 	else
-	{	
+	{
 		while (len > 0)
-		{	
+		{
 			dest[len - 1] = source[len -1];
 			len--;
 		}

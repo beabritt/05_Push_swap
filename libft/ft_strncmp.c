@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 14:37:20 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/09 14:37:23 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:31:57 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
 #include "libft.h"
 
 /*Compare not more than n characters between s1 & s2.

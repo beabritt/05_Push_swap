@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:05:33 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/27 12:34:36 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:38:15 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,18 +64,12 @@ char	**ft_toarray(int argc, char **argv)
 	return (arr);
 }
 
-void	leaks(void)
-{
-	system("leaks -q push_swap");
-}
-
 int	main(int argc, char *argv[])
 {
 	char		**array;
 	t_list		*stack_a;
 	t_list		*stack_b;
 
-	atexit(leaks);
 	if (argc < 2)
 		exit (1);
 	if (argv[1][0] == '\0')
@@ -95,6 +89,5 @@ int	main(int argc, char *argv[])
 		ft_free_end(array);
 	}
 	freestacks(&stack_a, &stack_b);
-	return (0);
-	//exit(EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }

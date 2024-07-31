@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid>       +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 19:06:14 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/20 19:06:20 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:32:50 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ static int	ft_search(char const *s1, char const *set, size_t i)
 	if (i == 0)
 	{
 		while (ft_strchr(set, (int)s1[i]) != NULL && i < slen)
-		i++;
+			i++;
 	}
 	else
 	{
 		while (ft_strchr(set, (int)s1[i]) != NULL && i > 0)
-		--i;
+			--i;
 	}
 	return (i);
 }
@@ -53,7 +53,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	x = ft_search(s1, set, 0);
 	y = ft_search(s1, set, ft_strlen(s1) -1);
 	if (x <= y)
-	{	
+	{
 		res = (char *)malloc(y - x + 2);
 		if (!res)
 			return (NULL);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:07:47 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/27 13:12:39 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:25:38 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-enum e_exit_code{
+enum e_exit_code
+{
 	ERROR = -1,
 	NO_ERROR = 0	
 };
 
-enum e_ordered{
+enum e_ordered
+{
 	NOT_ORDERED,
 	ORDERED
 };

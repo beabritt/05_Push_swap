@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 14:38:39 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/09 14:38:42 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:33:07 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
 #include "libft.h"
 
 // Locates the LAST occurrence of c in s.

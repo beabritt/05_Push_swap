@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 16:07:03 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/06 18:34:25 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:30:09 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
-#include<stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
-
 // Reserves a strings array using malloc, splitting string s in substrings
 //		using c character as an delimiter. Array must end with a NULL.
 static int	ft_search(const char *s, char c, int x)
@@ -39,8 +38,8 @@ static size_t	ft_wcounter(char const *s, char c)
 	while (s[x] != '\0')
 	{
 		if (s[x] != c && s[x - 1] == c)
-		cont++;
-	x++;
+			cont++;
+		x++;
 	}
 	return (cont);
 }

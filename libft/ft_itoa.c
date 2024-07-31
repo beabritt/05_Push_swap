@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 15:57:48 by becamino          #+#    #+#             */
-/*   Updated: 2023/03/03 15:57:51 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:28:17 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
-#include<stdio.h>
-#include<stdlib.h>
+
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
 // Using malloc, create a string that represents the integer recieved as an

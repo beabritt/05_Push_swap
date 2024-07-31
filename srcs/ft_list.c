@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:38 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:25:16 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:36:27 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_back(t_list **stack_a, t_list *node)
 	if (!*stack_a)
 		*stack_a = node;
 	else
-	{	
+	{
 		aux = *stack_a;
 		while (aux->next != NULL)
 		{

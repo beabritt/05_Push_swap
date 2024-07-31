@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:23:53 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/13 16:23:56 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:32:22 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
 #include "libft.h"
 
 /*	Search for s2 in s1 for n bytes.*/
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			x++;
 		while (x < len && haystack[x] == needle[y]
 			&& needle[y] != '\0')
-		{	
+		{
 			x++;
 			y++;
 		}

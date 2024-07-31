@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm5.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:18:07 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:25:37 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:35:10 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	ft_alg5(t_list **stack_a, t_list **stack_b, int counter)
 
 	i = 3;
 	while (i < counter)
-	{	
+	{
 		smallest_p = ft_smallest_pos(stack_a);
 		if (smallest_p < counter / 2)
 		{

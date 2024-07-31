@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid>       +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 13:08:15 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/23 13:08:19 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:31:19 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
-#include<stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
 /* Applies function f to every char of string s. It generates a new string

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 12:26:43 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/28 12:26:48 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:29:37 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 	num = n;
 	if (num < 0)
-	{	
+	{
 		write(fd, "-", 1);
 		num = -num;
 	}

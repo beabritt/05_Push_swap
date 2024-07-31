@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_mod.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:47 by becamino          #+#    #+#             */
-/*   Updated: 2023/09/29 18:47:23 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:38:25 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin_ps(char const *s1, char const *s2)
 	size_t	x;
 	size_t	slen2;
 	size_t	slen1;
-	void	*s3;
+	char	*s3;
 
 	slen1 = ft_strlen(s1);
 	slen2 = ft_strlen(s2);
@@ -47,7 +47,7 @@ int	ft_strnstr_ps(const char *haystack, const char *needle, size_t len)
 			x++;
 		while (x < len && haystack[x] == needle[y]
 			&& needle[y] != '\0')
-		{	
+		{
 			x++;
 			y++;
 		}

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 14:33:57 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/09 14:33:59 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:30:31 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
 #include "libft.h"
 
 // locates the first occurrence of c (converted to char) in the string s.

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checks.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2023/10/27 13:14:27 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:36:17 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,8 @@ int	ft_checkdupes(t_list **stack_a)
 		while (aux2 != NULL)
 		{
 			if (aux->n == aux2->n)
-			{	
+			{
 				write(2, "Error\n", 6);
-				//return (ERROR);
 				exit(EXIT_FAILURE);
 			}
 			aux2 = aux2->next;
@@ -62,11 +61,11 @@ int	ft_checknum(int argc, char **argv)
 	{
 		j = 0;
 		while (argv[i][j] != '\0')
-		{	
+		{
 			while (argv[i][j] == '-' || argv[i][j] == '+')
 			{
 				j++;
-				if (argv[i][j] == '-' || argv[i][j] == ' ' 
+				if (argv[i][j] == '-' || argv[i][j] == ' '
 					|| argv[i][j] == '+')
 					return (-1);
 			}

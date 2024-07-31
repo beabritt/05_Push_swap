@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:26:24 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/09 13:26:29 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:28:33 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
 
 /*Locates the first occurrence of c (converted into an unsigned char) 
 	in s string.

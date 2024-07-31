@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:33:15 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/13 16:33:18 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:27:43 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
 #include "libft.h"
-
 /* Converts the initial portion of the string pointed by str to integer 
 	representation.
 	We have to handle for blank spaces, signs and numbers*/
@@ -28,7 +26,7 @@ int	ft_atoi(const char *str)
 	while ((str[x] == 32 || (str[x] >= 9 && str[x] <= 13)))
 	{
 		x++;
-	}	
+	}
 	if (str[x] == '-')
 		sign *= -1;
 	if (str[x] == '-' || str[x] == '+')

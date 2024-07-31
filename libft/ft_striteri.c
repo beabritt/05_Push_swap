@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becamino <becamino@student.42madrid>       +#+  +:+       +#+        */
+/*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 13:19:56 by becamino          #+#    #+#             */
-/*   Updated: 2023/02/23 13:19:58 by becamino         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:30:37 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
-#include<stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
 /* Applies function f to every char of string s. It generates a new string
