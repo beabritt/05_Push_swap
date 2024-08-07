@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2024/07/31 16:36:17 by becamino         ###   ########.fr       */
+/*   Updated: 2024/08/07 18:44:20 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_checkdupes(t_list **stack_a)
 			if (aux->n == aux2->n)
 			{
 				write(2, "Error\n", 6);
-				exit(EXIT_FAILURE);
+				return (ERROR);
 			}
 			aux2 = aux2->next;
 		}

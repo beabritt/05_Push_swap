@@ -23,7 +23,7 @@ NAME    =   push_swap
 # sources and objects.
 RR  =   push_swap.c ft_checks.c ft_list.c ft_list2.c ft_werrors.c ft_xlen.c \
             ft_actions.c ft_mov_sp.c ft_mov_rot.c ft_mov_rr.c algorithm3.c \
-            algorithm5.c algorithm100.c algorithm500.c str_mod.c print_list.c
+            algorithm5.c algorithm100.c algorithm500.c str_mod.c
 SRCR_DIR    =   ./srcs/
 SRCR    =   $(addprefix $(SRCR_DIR), $(RR))
 OBJ_DIR =   ./obj/
