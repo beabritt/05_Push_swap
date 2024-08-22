@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:54 by becamino          #+#    #+#             */
-/*   Updated: 2024/08/07 18:44:20 by becamino         ###   ########.fr       */
+/*   Updated: 2024/08/22 16:28:53 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,40 +80,31 @@ int	ft_checknum(int argc, char **argv)
 	return (NO_ERROR);
 }
 
-int	ft_checkmaxmin(int argc, char **argv)
+int	ft_checkmaxmin(char **array)
 {
-	int	i;
-	int	minus;
+	long	n;
+	int		i;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (array[i] != NULL)
 	{
-		minus = ft_strchr_ps(argv[i], '-');
-		if (minus == 0)
+		n = ft_atol(array[i]);
+		if (n < INT_MIN || n > INT_MAX)
 		{
-			minus = ft_atoi(argv[i]);
-			if (minus < 0)
-				return (-1);
-		}
-		else
-		{
-			minus = ft_atoi(argv[i]);
-			if (minus > 0)
-				return (ERROR);
+			write (1, "Error\n", 6);
+			return (ERROR);
 		}
 		i++;
 	}
 	return (NO_ERROR);
+
 }
 
-//Check errors. 0 is ok, -1 is error.
 int	ft_checkerror(int argc, char **argv)
 {
 	if (ERROR == ft_onlyspaces(argv))
 		return (ERROR);
 	if (ERROR == ft_checknum(argc, argv))
-		return (ERROR);
-	if (ERROR == ft_checkmaxmin(argc, argv))
 		return (ERROR);
 	return (NO_ERROR);
 }

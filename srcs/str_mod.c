@@ -6,11 +6,38 @@
 /*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:54:47 by becamino          #+#    #+#             */
-/*   Updated: 2024/08/07 18:20:01 by becamino         ###   ########.fr       */
+/*   Updated: 2024/08/19 19:54:49 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+long	ft_atol(char *str)
+{
+	int		i;
+	int		neg;
+	long	result;
+
+	i = 0;
+	neg = 1;
+	result = 0;
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	if (str[i] == '-')
+	{
+		neg = neg * (-1);
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
+	{
+		result = result * 10 + str[i] - '0';
+		i++;
+	}
+	result = result * neg;
+	return (result);
+}
 
 char	*ft_strjoin_ps(char const *s1, char const *s2)
 {

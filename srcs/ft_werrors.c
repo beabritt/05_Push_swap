@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:57:37 by becamino          #+#    #+#             */
-/*   Updated: 2024/08/07 17:03:45 by becamino         ###   ########.fr       */
+/*   Updated: 2024/08/08 16:26:58 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void	ft_free_end(char **array)
 void	ft_error(void)
 {
 	ft_putstr_fd("Error\n", 2);
-	exit (1);
+	exit (EXIT_FAILURE);
 }

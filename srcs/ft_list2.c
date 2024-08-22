@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 17:12:39 by becamino          #+#    #+#             */
-/*   Updated: 2024/08/07 18:42:18 by becamino         ###   ########.fr       */
+/*   Updated: 2024/08/08 16:14:39 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	freestacks(t_list **stack_a, t_list **stack_b)
 {
-
 	ft_lstclear(stack_a);
 	if (stack_b != NULL)
 		ft_lstclear(stack_b);

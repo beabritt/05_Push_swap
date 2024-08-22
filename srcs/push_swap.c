@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 20:05:33 by becamino          #+#    #+#             */
-/*   Updated: 2024/08/07 17:03:45 by becamino         ###   ########.fr       */
+/*   Updated: 2024/08/22 16:28:01 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,10 @@ int	main(int argc, char *argv[])
 	{
 		array = ft_toarray(argc, argv);
 		ft_tolist(&stack_a, array);
-		if ((NOT_ORDERED == ft_checkorder(&stack_a))
+		if (NO_ERROR == ft_checkmaxmin(array) &&
+			(NOT_ORDERED == ft_checkorder(&stack_a))
 			&& (NO_ERROR == ft_checkdupes(&stack_a)))
-			ft_deliver(&stack_a, &stack_b);
+				ft_deliver(&stack_a, &stack_b);
 		ft_free_end(array);
 	}
 	freestacks(&stack_a, &stack_b);

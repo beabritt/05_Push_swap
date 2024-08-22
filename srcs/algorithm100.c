@@ -6,7 +6,7 @@
 /*   By: becamino <becamino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 12:19:34 by becamino          #+#    #+#             */
-/*   Updated: 2024/08/07 17:03:45 by becamino         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:37:49 by becamino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int	ft_counter_bign(t_list **stack_a, int bigger_order)
 	return (count);
 }
 
+//moves the number under big_order to stack_b or to the top of stack_a.
 void	ft_push_b(t_list **stack_a, t_list **stack_b, int stack_len,
 		int big_order)
 {
